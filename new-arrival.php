@@ -159,16 +159,16 @@ else{
                     <?php if (isset($_SESSION['UserLogIn'])){ ?>
                         <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                        <a href="men.php" class="nav-link dropbtn active-men">Men</a>
+                        <a href="cars.php" class="nav-link dropbtn active-men">Cars</a>
                         <div class="dropdown-content">
                             <a href="hot-deals.php">Hot Deals</a>
                             <a href="new-arrival.php"  class="active-men-dropdown">New Arrival</a>
-                            <a href="men-formal-attire.php">Classic Cars</a>
+                            <a href="jdm-classics.php">Classic Cars</a>
                         </div>
                     </li>
                 
                     <li class="nav-item dropdown">
-                        <a href="women.php" class="nav-link dropbtn">Women</a>
+                        <a href="merchandise.php" class="nav-link dropbtn">Merchandise</a>
                         <div class="dropdown-content">
                             <a href="women-top.php">Top</a>
                             <a href="women-bottom.php">Bottom</a>
@@ -188,16 +188,16 @@ else{
                     <?php } else{ ?>
                         <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                        <a href="men.php" class="nav-link dropbtn active-men">Men</a>
+                        <a href="cars.php" class="nav-link dropbtn active-men">Cars</a>
                         <div class="dropdown-content">
                             <a href="hot-deals.php">Hot Deals</a>
                             <a href="new-arrival.php"  class="active-men-dropdown">New Arrival</a>
-                            <a href="men-formal-attire.php">Classic Cars</a>
+                            <a href="jdm-classics.php">Classic Cars</a>
                         </div>
                     </li>
                 
                     <li class="nav-item dropdown">
-                        <a href="women.php" class="nav-link dropbtn">Women</a>
+                        <a href="merchandise.php" class="nav-link dropbtn">Merchandise</a>
                         <div class="dropdown-content">
                             <a href="women-top.php">Top</a>
                             <a href="women-bottom.php">Bottom</a>

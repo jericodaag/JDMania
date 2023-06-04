@@ -43,7 +43,7 @@ $con=connect();
         if(isset($_GET['searchitem'])){ 
             $searchkey=$_GET['searchitem'];
             if($searchkey==""){
-                echo header("Refresh: 0 url=home.php");
+                echo header("Location:home.php");
             }
            
             $sql = "SELECT * FROM tblinventory WHERE `productName` like '%$searchkey%' OR `type` like '%$searchkey%' OR `category` like '%$searchkey%' OR `subcategory` like '%$searchkey%' OR `itemdesc1` like '%$searchkey%' OR `itemdesc2` like '%$searchkey%' OR `itemdesc2` like '%$searchkey%'";
@@ -381,6 +381,7 @@ else{
         
 
     }
+   
 }
 ?>
 
@@ -389,6 +390,7 @@ else{
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JDMania Autodeals</title>
@@ -424,22 +426,22 @@ else{
                 <span class="fas fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-               
+            <hr class="dropdown-divider">
 
                 <ul class="navbar-nav ml-auto">
                     <?php if (isset($_SESSION['UserLogIn'])){ ?>
                         <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                        <a href="cars.php" class="nav-link dropbtn">Men</a>
+                        <a href="cars.php" class="nav-link dropbtn">Cars</a>
                         <div class="dropdown-content">
-                            <a href="men-top.php">Top</a>
-                            <a href="men-bottom.php">Bottom</a>
-                            <a href="men-formal-attire.php">Formal Attire</a>
+                            <a href="hot-deals.php">Hot Deals</a>
+                            <a href="new-arrival.php">New Arrival</a>
+                            <a href="jdm-classics.php">Classic Cars</a>
                         </div>
                     </li>
                 
                     <li class="nav-item dropdown">
-                        <a href="women.php" class="nav-link dropbtn">Women</a>
+                        <a href="merchandise.php" class="nav-link dropbtn">Merchandise</a>
                         <div class="dropdown-content">
                             <a href="women-top.php">Top</a>
                             <a href="women-bottom.php">Bottom</a>
@@ -448,7 +450,7 @@ else{
                     </li>
                 
                     <li class="nav-item dropdown">
-                        <a href="kids.php" class="nav-link dropbtn">Kids</a>
+                        <a href="about.php" class="nav-link dropbtn">About</a>
                         <div class="dropdown-content">
                             <a href="kids-boys.php">Boys</a>
                             <a href="kids-girls.php">Girls</a>
@@ -460,7 +462,7 @@ else{
                     <?php } else{ ?>
                         <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                        <a href="cars.php" class="nav-link dropbtn">Men</a>
+                        <a href="cars.php" class="nav-link dropbtn">Cars</a>
                         <div class="dropdown-content">
                             <a href="men-top.php">Top</a>
                             <a href="men-bottom.php">Bottom</a>
@@ -469,7 +471,7 @@ else{
                     </li>
                 
                     <li class="nav-item dropdown">
-                        <a href="women.php" class="nav-link dropbtn">Women</a>
+                        <a href="merchandise.php" class="nav-link dropbtn">Merchandise</a>
                         <div class="dropdown-content">
                             <a href="women-top.php">Top</a>
                             <a href="women-bottom.php">Bottom</a>
@@ -478,7 +480,7 @@ else{
                     </li>
                 
                     <li class="nav-item dropdown">
-                        <a href="kids.php" class="nav-link dropbtn">Kids</a>
+                        <a href="about.php" class="nav-link dropbtn">About</a>
                         <div class="dropdown-content">
                             <a href="kids-boys.php">Boys</a>
                             <a href="kids-girls.php">Girls</a>
@@ -687,7 +689,7 @@ else{
                 </div>
             </div>
        
-        <br><br><br><br><br><br><br><br><br><br>
+        
 
     <?php } else {?>
 
@@ -703,11 +705,11 @@ else{
         <div class="carousel-inner">
        
             <div class="carousel-item active">
-                <img src="images/home/carousel-1.jpg" alt="Wardrobe" class="img-fluid">
+                <img src="images/home/carban-1.jpg" alt="Wardrobe" class="img-fluid">
                 <div class="carousel-caption">
-                    <h1 class="display-4">We offer you the best deals around town</h1>
-                    <p class="lead">Compared to most clothing store</p>
-                    <a href=#about><button type="button" class="btn btn-primary btn-md">Learn More</button></a>
+                    <h1 class="display-4">JDMania JDM Collections</h1>
+                    <p class="lead">Sports and classic vehicle exporters located in central Japan</p>
+                    <a href="home.php#about"><button type="button" class="btn btn-primary btn-md">Learn More</button></a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -715,7 +717,7 @@ else{
                 <div class="carousel-caption">
                     <h1 class="display-4">Take a look at our finest collection</h1>
                     <p class="lead">Premium products all around the shop</p>
-                    <a href=#about><button type="button" class="btn btn-primary btn-md">Learn More</button></a>
+                    <a href="home.php#about"><button type="button" class="btn btn-primary btn-md">Learn More</button></a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -723,12 +725,12 @@ else{
                 <div class="carousel-caption">
                     <h1 class="display-4">You won't regret buying from us</h1>
                     <p class="lead">Our products can last forever</p>
-                    <a href=#about><button type="button" class="btn btn-primary btn-md">Learn More</button></a>
+                    <a href="home.php#about"><button type="button" class="btn btn-primary btn-md">Learn More</button></a>
                 </div>
             </div>
           <form method=get>
                     <div class="search-boxitem">
-                    <input class="search-input" name=searchitem minlength=3 value="<?php $searchkey?>" type="text" placeholder="Search something..">
+                    <input class="search-inputhome" name=searchitem minlength=3 value="<?php $searchkey?>" type="text" placeholder="Search something..">
                      <button class="search-btn"><i class="fas fa-search"></i></button>
                      <?php if (isset($_SESSION['UserLogIn'])){ ?>
                         <a href="cart.php" class="nav-link cart-button">
@@ -793,10 +795,8 @@ else{
                                 <a href="home.php?select=<?php echo $rows['productID']?>"><button type=submit name=select id=select><img src="<?php echo "images/products/".$rows['photo']?>" alt=""></button></a>
                                      <?php if($rows['category']=="Men"){?>
                                         <div class="shape men"><?php echo "₱".$rows['price']?></div>
-                                    <?php } else if($rows['category']=="Women"){?>
-                                        <div class="shape women"><?php echo "₱".$rows['price']?></div>
-                                    <?php } else if($rows['category']=="Kids"){?>
-                                        <div class="shape kids"><?php echo "₱".$rows['price']?></div>
+                                    <?php } else if($rows['category']=="Merchandise"){?>
+                                        <div class="shape about"><?php echo "₱".$rows['price']?></div>
                                     <?php }?>
                         
                             </div>
@@ -829,16 +829,16 @@ else{
         <br><br><br>
         <div class="row text-center categories">
             <div class="col-xs-12 col-sm-6 col-lg-4 overlay">
-                <a href="cars.php"><img src="images/home/categories-cars3.jpg" alt="Men"></a>
+                <a href="cars.php"><img src="images/home/car categories.jpg" alt="Cars"></a>
                 <h4>Shop Cars</h4>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 overlay">
-                <a href="women.php"><img src="images/home/categories-women.jpg" alt="Women"></a>
-                <h4>Shop Women</h4>
+                <a href="merchandise.php"><img src="images/home/car merchandise.jpg" alt="Merchandise"></a>
+                <h4>Shop Merchandise</h4>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 overlay">
-                <a href="kids.php"><img src="images/home/categories-kids.jpg" alt="Kids"></a>
-                <h4>Shop Kids</h4>
+                <a href="about.php"><img src="images/home/all about.jpg" alt="About"></a>
+                <h4>About</h4>
             </div>
         </div>
     </div>
@@ -863,10 +863,8 @@ else{
                                     <img src="<?php echo "images/products/".$row['photo']?>" alt="">
                                     <?php if($row['category']=="Men"){?>
                                         <div class="shape men"><?php echo "₱".$row['price']?></div>
-                                    <?php } else if($row['category']=="Women"){?>
-                                        <div class="shape women"><?php echo "₱".$row['price']?></div>
-                                    <?php } else if($row['category']=="Kids"){?>
-                                        <div class="shape kids"><?php echo "₱".$row['price']?></div>
+                                    <?php } else if($row['category']=="Merchandise"){?>
+                                        <div class="shape merchandise"><?php echo "₱".$row['price']?></div>
                                     <?php }?>
                                 </div>
                                 <div class="item-description-container">
@@ -909,10 +907,8 @@ else{
                                     <img src="<?php echo "images/products/".$row['photo']?>" alt="">
                                     <?php if($row['category']=="Men"){?>
                                         <div class="shape men"><?php echo "₱".$row['price']?></div>
-                                    <?php } else if($row['category']=="Women"){?>
-                                        <div class="shape women"><?php echo "₱".$row['price']?></div>
-                                    <?php } else if($row['category']=="Kids"){?>
-                                        <div class="shape kids"><?php echo "₱".$row['price']?></div>
+                                    <?php } else if($row['category']=="Merchandise"){?>
+                                        <div class="shape merchandise"><?php echo "₱".$row['price']?></div>
                                     <?php }?>
                                 </div>
                                 <div class="item-description-container">
@@ -955,8 +951,8 @@ else{
                                     <img src="<?php echo "images/products/".$row['photo']?>" alt="">
                                     <?php if($row['category']=="Men"){?>
                                         <div class="shape men"><?php echo "₱".$row['price']?></div>
-                                    <?php } else if($row['category']=="Women"){?>
-                                        <div class="shape women"><?php echo "₱".$row['price']?></div>
+                                    <?php } else if($row['category']=="Merchandise"){?>
+                                        <div class="shape merchandise"><?php echo "₱".$row['price']?></div>
                                     <?php } else if($row['category']=="Kids"){?>
                                         <div class="shape kids"><?php echo "₱".$row['price']?></div>
                                     <?php }?>

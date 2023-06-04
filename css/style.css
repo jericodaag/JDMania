@@ -1,6 +1,6 @@
 /* NAVIGATION */
 body{
-    background-color: #dedede;
+    background-color: black;
 }
 nav {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
@@ -385,7 +385,7 @@ form .btn:hover {
 .header {
     font-size: 2.2rem;
     font-weight: 100;
-    background-color: #dedede;
+    background-color: #000000;
     padding: 0px 20px;
 }
 
@@ -1088,31 +1088,16 @@ font-size: 12px;
     border-radius: 5px;
 }
 .men.banner-image-container {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #3cafe1 50%, #3cafe1), url("../images/home/carbanner.jpg");
+    background-image: url("../images/home/jdm banner.jpg");
     flex-direction:row-reverse;
     background-size:100%, 200%;
 }
 
-.men.banner-image-container h4 {
-    border-top: 5px solid #92deff;
-    border-right: 5px solid #92deff;
-    padding: 0 10px 0 0;
-    font-size: 30px;
-    
-    
-}
-
 .women.banner-image-container {
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), #fc6585 80%, #fc6585), url("../images/home/womenbanner.jpg");
+    background-image: url("../images/home/merchbanner.jpg");
     background-size:100%, 200%;
 }
 
-.women.banner-image-container h4 {
-    border-bottom: 5px solid #ff2050;
-    border-left: 5px solid #ff2050;
-    padding: 0 0 0 10px;
-    font-size: 30px;
-}
 
 .kids.banner-image-container {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #7cc03a 40%, #7cc03a 60%, rgba(0, 0, 0, 0)), url("../images/home/kidsbanner.jpg");
@@ -1232,29 +1217,17 @@ font-size: 12px;
         border-radius: 5px;
     }
     .men.banner-image-container {
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #3cafe1 80%, #3cafe1), url("../images/home/carbanner.jpg");
+        background-image: url("../images/home/jdm banner.jpg");
         flex-direction: row-reverse;
         background-size:100%, 120%;
     }
     
-    .men.banner-image-container h4 {
-        border-top: 5px solid #92deff;
-        border-right: 5px solid #92deff;
-        padding: 0 10px 0 0;
-        font-size: 70px;
-    }
     
     .women.banner-image-container {
-        background-image: linear-gradient(to left, rgba(0, 0, 0, 0), #fc6585 80%, #fc6585), url("../images/home/womenbanner.jpg");
+        background-image: url("../images/home/merchbanner.jpg");
         background-size:100%, 150%;
     }
     
-    .women.banner-image-container h4 {
-        border-bottom: 5px solid #ff2050;
-        border-left: 5px solid #ff2050;
-        padding: 0 0 0 10px;
-        font-size: 70px;
-    }
     
     .kids.banner-image-container {
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #7cc03a 40%, #7cc03a 60%, rgba(0, 0, 0, 0)), url("../images/home/kidsbanner.jpg");
@@ -1381,28 +1354,15 @@ font-size: 12px;
             border-radius: 5px;
         }
         .men.banner-image-container {
-            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #3cafe1 80%, #3cafe1), url("../images/home/carbanner.jpg");
+            background-image: url("../images/home/jdm banner.jpg");
             flex-direction: row-reverse;
             background-size:100%, 100%;
         }
         
-        .men.banner-image-container h4 {
-            border-top: 5px solid #92deff;
-            border-right: 5px solid #92deff;
-            padding: 0 10px 0 0;
-            font-size: 80px;
-        }
         
         .women.banner-image-container {
-            background-image: linear-gradient(to left, rgba(0, 0, 0, 0), #fc6585 80%, #fc6585), url("../images/home/womenbanner.jpg");
+            background-image: url("../images/home/merchbanner.jpg");
             background-size:100%, 100%;
-        }
-        
-        .women.banner-image-container h4 {
-            border-bottom: 5px solid #ff2050;
-            border-left: 5px solid #ff2050;
-            padding: 0 0 0 10px;
-            font-size: 80px;
         }
         
         .kids.banner-image-container {

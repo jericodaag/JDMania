@@ -434,9 +434,9 @@ else{
                     <li class="nav-item dropdown">
                         <a href="cars.php" class="nav-link dropbtn">Cars</a>
                         <div class="dropdown-content">
-                            <a href="men-top.php">Top</a>
-                            <a href="men-bottom.php">Bottom</a>
-                            <a href="men-formal-attire.php">Formal Attire</a>
+                            <a href="hot-deals.php">Hot Deals</a>
+                            <a href="new-arrival.php">New Arrival</a>
+                            <a href="jdm-classics.php">Classic Cars</a>
                         </div>
                     </li>
                 
@@ -801,7 +801,7 @@ else{
                         
                             </div>
                             
-                             <div class="item-description-container">
+                             <div class="item-description-container" style="color:white;">
                                     <h5><?php echo $rows['productName']?></h5>
                                     <p><?php echo $rows['itemdesc1']?></p>
                                     <span class="fa fa-star"></span>
@@ -822,19 +822,19 @@ else{
 <?php } else {?>
 
     <!-- OUR CATEGORIES -->
-    <div class="container">
+    <div class="container" style="color:white;">
         <div class="header-container">
             <span class="header">Categories</span>
         </div>
         <br><br><br>
         <div class="row text-center categories">
             <div class="col-xs-12 col-sm-6 col-lg-4 overlay">
-                <a href="cars.php"><img src="images/home/car category.jpg" alt="Cars"></a>
-                <h4>Shop Cars</h4>
+                <a href="cars.php"><img src="images/home/car categories.jpg" alt="Cars"></a>
+                <h4>Cars</h4>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 overlay">
                 <a href="merchandise.php"><img src="images/home/car merchandise.jpg" alt="Merchandise"></a>
-                <h4>Shop Merchandise</h4>
+                <h4>Merchandise</h4>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 overlay">
                 <a href="about.php"><img src="images/home/all about.jpg" alt="About"></a>
@@ -848,7 +848,7 @@ else{
 
 
     <!-- FEATURED PRODUCTS -->
-    <div class="container">
+    <div class="container" style="color:white;">
         <div class="header-container">
             <span class="header">Featured Products</span>
         </div>
@@ -867,7 +867,7 @@ else{
                                         <div class="shape merchandise"><?php echo "₱".$row['price']?></div>
                                     <?php }?>
                                 </div>
-                                <div class="item-description-container">
+                                <div class="item-description-container" style="color:white;">
                                     <h5><?php echo $row['productName']?></h5>
                                     <p><?php echo $row['itemdesc1']?></p>
                                     <span class="fa fa-star"></span>
@@ -892,7 +892,7 @@ else{
 
 
     <!-- BEST SELLERS -->
-    <div class="container">
+    <div class="container" style="color:white;">
         <div class="header-container">
             <span class="header">Best Sellers</span>
         </div>
@@ -911,7 +911,7 @@ else{
                                         <div class="shape merchandise"><?php echo "₱".$row['price']?></div>
                                     <?php }?>
                                 </div>
-                                <div class="item-description-container">
+                                <div class="item-description-container" style="color:white;">
                                     <h5><?php echo $row['productName']?></h5>
                                     <p><?php echo $row['itemdesc2']?></p>
                                     <span class="fa fa-star"></span>
@@ -936,7 +936,7 @@ else{
 
 
     <!-- DAILY DISCOVER -->
-    <div class="container">
+    <div class="container" style="color:white;">
         <div class="header-container">
             <span class="header">Daily Discover</span>
         </div>
@@ -957,7 +957,7 @@ else{
                                         <div class="shape kids"><?php echo "₱".$row['price']?></div>
                                     <?php }?>
                                 </div>
-                                <div class="item-description-container">
+                                <div class="item-description-container" style="color:white;">
                                     <h5><?php echo $row['productName']?></h5>
                                     <p><?php echo $row['itemdesc3']?></p>
                                     <span class="fa fa-star"></span>

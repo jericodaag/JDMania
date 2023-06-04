@@ -159,7 +159,7 @@ else{
                     <?php if (isset($_SESSION['UserLogIn'])){ ?>
                         <ul class="navbar-nav">
                                 <li class="nav-item dropdown">
-                                    <a href="men.php" class="nav-link dropbtn active-men">Men</a>
+                                    <a href="cars.php" class="nav-link dropbtn active-men">Cars</a>
                                     <div class="dropdown-content">
                                         <a href="hot-deals.php">Hot Deals</a>
                                         <a href="new-arrival.php">New Arrival</a>
@@ -188,7 +188,7 @@ else{
                     <?php } else{ ?>
                         <ul class="navbar-nav">
                                 <li class="nav-item dropdown">
-                                    <a href="men.php" class="nav-link dropbtn active-men">Men</a>
+                                    <a href="cars.php" class="nav-link dropbtn active-men">Cars</a>
                                     <div class="dropdown-content">
                                         <a href="hot-deals.php">Hot Deals</a>
                                         <a href="new-arrival.php">New Arrival</a>
@@ -304,7 +304,7 @@ else{
     <!-- MEN-FORMAL-ATTIRE ITEMS -->
     <div class="container text-center">
         <div class="row">
-        <?php while($row = $mtops->fetch_array()){?>
+        <?php while($row = $mf->fetch_array()){?>
                 <div class="col-xs-12 col-sm-6 col-lg-4 overlay">
                 <div class="item-wc">
                 <a href="home.php?select=<?php echo $row['productID']?>"><button type=submit name=select id=select><img src="<?php echo "images/products/".$row['photo']?>" alt=""></button></a>

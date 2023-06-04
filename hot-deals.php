@@ -156,7 +156,7 @@ else{
                     <?php if (isset($_SESSION['UserLogIn'])){ ?>
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
-                                <a href="men.php" class="nav-link dropbtn active-men">Men</a>
+                                <a href="cars.php" class="nav-link dropbtn active-men">Cars</a>
                                 <div class="dropdown-content">
                                     <a href="hot-deals.php" class="active-men-dropdown">Hot Deals</a>
                                     <a href="new-arrival.php">New Arrival</a>
@@ -165,7 +165,7 @@ else{
                             </li>
                         
                             <li class="nav-item dropdown">
-                                <a href="women.php" class="nav-link dropbtn">Women</a>
+                                <a href="merchandise.php" class="nav-link dropbtn">Merchandise</a>
                                 <div class="dropdown-content">
                                     <a href="women-top.php">Top</a>
                                     <a href="women-bottom.php">Bottom</a>
@@ -174,7 +174,7 @@ else{
                             </li>
                     
                             <li class="nav-item dropdown">
-                                <a href="kids.php" class="nav-link dropbtn">Kids</a>
+                                <a href="about.php" class="nav-link dropbtn">About</a>
                                 <div class="dropdown-content">
                                     <a href="kids-boys.php">Boys</a>
                                     <a href="kids-girls.php">Girls</a>
@@ -185,7 +185,7 @@ else{
                     <?php } else{ ?>
                         <ul class="navbar-nav">
                             <li class="nav-item dropdown">
-                                <a href="men.php" class="nav-link dropbtn active-men">Men</a>
+                                <a href="cars.php" class="nav-link dropbtn active-men">Cars</a>
                                 <div class="dropdown-content">
                                     <a href="hot-deals.php" class="active-men-dropdown">Hot Deals</a>
                                     <a href="new-arrival.php">New Arrival</a>
@@ -194,7 +194,7 @@ else{
                             </li>
                         
                             <li class="nav-item dropdown">
-                                <a href="women.php" class="nav-link dropbtn">Women</a>
+                                <a href="merchandise.php" class="nav-link dropbtn">Merchandise</a>
                                 <div class="dropdown-content">
                                     <a href="women-top.php">Top</a>
                                     <a href="women-bottom.php">Bottom</a>
@@ -203,7 +203,7 @@ else{
                             </li>
                     
                             <li class="nav-item dropdown">
-                                <a href="kids.php" class="nav-link dropbtn">Kids</a>
+                                <a href="about.php" class="nav-link dropbtn">About</a>
                                 <div class="dropdown-content">
                                     <a href="kids-boys.php">Boys</a>
                                     <a href="kids-girls.php">Girls</a>

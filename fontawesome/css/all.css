@@ -10,7 +10,7 @@
 .fab {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  display: inline-block;
+  display: flex;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;

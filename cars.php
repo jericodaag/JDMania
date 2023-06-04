@@ -164,12 +164,12 @@ else{
                                 <div class="dropdown-content">
                                     <a href="hot-deals.php">Hot Deals</a>
                                     <a href="new-arrival.php">New Arrival</a>
-                                    <a href="jdm-classics.php">Jdm Classics</a>
+                                    <a href="jdm-classics.php">Classic Cars</a>
                                 </div>
                             </li>
                         
                             <li class="nav-item dropdown">
-                                <a href="women.php" class="nav-link dropbtn">Women</a>
+                                <a href="merchandise.php" class="nav-link dropbtn">Merchandise</a>
                                 <div class="dropdown-content">
                                     <a href="women-top.php">Top</a>
                                     <a href="women-bottom.php">Bottom</a>
@@ -178,7 +178,7 @@ else{
                             </li>
                         
                             <li class="nav-item dropdown">
-                                <a href="kids.php" class="nav-link dropbtn">Kids</a>
+                                <a href="merchandise.php" class="nav-link dropbtn">About</a>
                                 <div class="dropdown-content">
                                     <a href="kids-boys.php">Boys</a>
                                     <a href="kids-girls.php">Girls</a>
@@ -194,12 +194,12 @@ else{
                                 <div class="dropdown-content">
                                     <a href="hot-deals.php">Hot Deals</a>
                                     <a href="new-arrival.php">New Arrival</a>
-                                    <a href="jdm-classics.php">Jdm Classics</a>
+                                    <a href="jdm-classics.php">Classic Cars</a>
                                 </div>
                             </li>
                         
                             <li class="nav-item dropdown">
-                                <a href="women.php" class="nav-link dropbtn">Women</a>
+                                <a href="merchandise.php" class="nav-link dropbtn">Merchandise</a>
                                 <div class="dropdown-content">
                                     <a href="women-top.php">Top</a>
                                     <a href="women-bottom.php">Bottom</a>
@@ -208,7 +208,7 @@ else{
                             </li>
                         
                             <li class="nav-item dropdown">
-                                <a href="kids.php" class="nav-link dropbtn">Kids</a>
+                                <a href="about.php" class="nav-link dropbtn">About</a>
                                 <div class="dropdown-content">
                                     <a href="kids-boys.php">Boys</a>
                                     <a href="kids-girls.php">Girls</a>
@@ -271,11 +271,11 @@ else{
     <br><br>
 
 
-    <!-- BANNER MEN -->
-    <div class="container">
+    <!-- BANNER CARS -->
+    <div class="header">
         <div class="row">
             
-            <div class="col-12 men banner-image-container"> 
+            <div class="col-12 men banner-image-container" style="color:white;">
                 <h4 class="display-4">Car Categories</h4>
             <form action=home.php method=get>
                 <div class="search-boxmen">
@@ -304,12 +304,12 @@ else{
 
 
     <!-- PRODUCT CAROUSEL -->
-        <div class="header-container">
+        <div class="header-container" style="color:white;">
             <span class="header">Hot Deals</span>
         </div>
         <br><br><br>
        
-        <div class="row text-center">
+        <div class="row text-center" style="color:white;">
         
             <div class="col-12">
                 <div class="owl-carousel owl-theme">
@@ -321,7 +321,7 @@ else{
                         <a href="home.php?select=<?php echo $row['productID']?>"><button type=submit name=select id=select><img src="<?php echo "images/products/".$row['photo']?>" alt=""></button></a>
                             <?php if($row['category']=="Cars"){?>
                                     <div class="shape men"><?php echo "₱".$row['price']?></div>
-                                <?php } else if($row['category']=="Women"){?>
+                                <?php } else if($row['category']=="Cars"){?>
                                     <div class="shape women"><?php echo "₱".$row['price']?></div>
                                 <?php } else if($row['category']=="Kids"){?>
                                     <div class="shape kids"><?php echo "₱".$row['price']?></div>
@@ -356,12 +356,12 @@ else{
     
 
     <!-- PRODUCT CAROUSEL -->
-        <div class="header-container">
+        <div class="header-container" style="color:white;">
             <span class="header">New Arrival</span>
         </div>
         <br><br><br>
        
-        <div class="row text-center">
+        <div class="row text-center" style="color:white;">
         
             <div class="col-12">
                 <div class="owl-carousel owl-theme">
@@ -371,9 +371,9 @@ else{
                         <div class="item-container">
                         <div class="item-image-container">
                         <a href="home.php?select=<?php echo $row['productID']?>"><button type=submit name=select id=select><img src="<?php echo "images/products/".$row['photo']?>" alt=""></button></a>
-                            <?php if($row['category']=="Men"){?>
+                            <?php if($row['category']=="Cars"){?>
                                     <div class="shape men"><?php echo "₱".$row['price']?></div>
-                                <?php } else if($row['category']=="Women"){?>
+                                <?php } else if($row['category']=="Cars"){?>
                                     <div class="shape women"><?php echo "₱".$row['price']?></div>
                                 <?php } else if($row['category']=="Kids"){?>
                                     <div class="shape kids"><?php echo "₱".$row['price']?></div>
@@ -410,12 +410,13 @@ else{
 
 
     <!-- PRODUCT CAROUSEL -->
-        <div class="header-container">
+    
+        <div class="header-container" style="color:white;">
             <span class="header">Jdm Classics</span>
         </div>
         <br><br><br>
        
-        <div class="row text-center">
+        <div class="row text-center" style="color:white;">
         
             <div class="col-12">
                 <div class="owl-carousel owl-theme">
@@ -427,7 +428,7 @@ else{
                         <a href="home.php?select=<?php echo $row['productID']?>"><button type=submit name=select id=select><img src="<?php echo "images/products/".$row['photo']?>" alt=""></button></a>
                             <?php if($row['category']=="Men"){?>
                                     <div class="shape men"><?php echo "₱".$row['price']?></div>
-                                <?php } else if($row['category']=="Women"){?>
+                                <?php } else if($row['category']=="Cars"){?>
                                     <div class="shape women"><?php echo "₱".$row['price']?></div>
                                 <?php } else if($row['category']=="Kids"){?>
                                     <div class="shape kids"><?php echo "₱".$row['price']?></div>
