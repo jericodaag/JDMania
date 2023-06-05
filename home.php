@@ -657,7 +657,7 @@ else{
 
                          
 <!-- EXPRESS PAYMENT -->
-<div id="online" stryle="display: none">
+<div id="online" style="display: none">
     <div class="row checkout-express">
         <br><br>
       

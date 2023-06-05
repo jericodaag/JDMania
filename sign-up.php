@@ -234,7 +234,7 @@ if(!isset($_SESSION)){
                 <ul class="navbar-nav ml-auto">
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
-                            <a href="car.php" class="nav-link dropbtn">Cars</a>
+                            <a href="cars.php" class="nav-link dropbtn">Cars</a>
                             <div class="dropdown-content">
                                 <a href="men-top.php">Top</a>
                                 <a href="men-bottom.html">Bottom</a>

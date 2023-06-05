@@ -131,7 +131,7 @@ else{
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JDMania | Cars</title>
+    <title>JDM | Cars</title>
     <link rel="shortcut icon" type=image/x-icon href=images/icon.png>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome/css/all.css">
@@ -171,9 +171,9 @@ else{
                             <li class="nav-item dropdown">
                                 <a href="merchandise.php" class="nav-link dropbtn">Merchandise</a>
                                 <div class="dropdown-content">
-                                    <a href="women-top.php">Top</a>
-                                    <a href="women-bottom.php">Bottom</a>
-                                    <a href="women-dress.php">Dress</a>
+                                    <a href="best-sellers.php">Best Sellers</a>
+                                    <a href="car-accessories.php">Accessories</a>
+                                    <a href="jdm-clothing.php">Jdm Clothing</a>
                                 </div>
                             </li>
                         
@@ -201,9 +201,9 @@ else{
                             <li class="nav-item dropdown">
                                 <a href="merchandise.php" class="nav-link dropbtn">Merchandise</a>
                                 <div class="dropdown-content">
-                                    <a href="women-top.php">Top</a>
-                                    <a href="women-bottom.php">Bottom</a>
-                                    <a href="women-dress.php">Dress</a>
+                                    <a href="best-sellers.php">Best Sellers</a>
+                                    <a href="car-accessories.php">Accessories</a>
+                                    <a href="jdm-clothing.php">Jdm Clothing</a>
                                 </div>
                             </li>
                         
@@ -272,9 +272,8 @@ else{
 
 
     <!-- BANNER CARS -->
-    <div class="header">
-        <div class="row">
-            
+    <div class="inline">
+        
             <div class="col-12 men banner-image-container" style="color:white;">
                 <h4 class="display-4">Car Categories</h4>
             <form action=home.php method=get>

@@ -151,7 +151,7 @@ else{
 
 
     <!-- NAVIGATION -->
-    <nav class="navbar navbar-expand-md sticky-top navigation">
+    <nav class="navbar navbar-expand-md sticky-top navigation" >
         <div class="container-fluid">
             <a href="home.php" class="navbar-brand logo-container"><img src="images/Logo.png" alt="" class="logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
@@ -173,9 +173,9 @@ else{
                             <li class="nav-item dropdown">
                                 <a href="merchandise.php" class="nav-link dropbtn active-women" id=women>Merchandise</a>
                                 <div class="dropdown-content">
-                                    <a href="women-top.php">Best Sellers</a>
-                                    <a href="women-bottom.php">Bottom</a>
-                                    <a href="women-dress.php">Dress</a>
+                                    <a href="best-sellers.php">Best Sellers</a>
+                                    <a href="car-accessories.php">Car Accessories</a>
+                                    <a href="jdm-clothing.php">Jdm Clothing</a>
                                 </div>
                             </li>
                         
@@ -202,9 +202,9 @@ else{
                             <li class="nav-item dropdown">
                                 <a href="merchandise.php" class="nav-link dropbtn active-women" id=women>Merchandise</a>
                                 <div class="dropdown-content">
-                                    <a href="women-top.php">Top</a>
-                                    <a href="women-bottom.php">Bottom</a>
-                                    <a href="women-dress.php">Dress</a>
+                                    <a href="best-sellers.php">Best Sellers</a>
+                                    <a href="car-accessories.php">Car Accessories</a>
+                                    <a href="jdm-clothing.php">Jdm Clothing</a>
                                 </div>
                             </li>
                         
@@ -274,9 +274,8 @@ else{
 
 
 
-    <!-- BANNER WOMEN -->
-    <div class="header">
-        <div class="row">
+    <!-- BANNER MERCHANDISE -->
+        <div class="inline" style="color:white;">
             <div class="col-12 women banner-image-container">
                 <h4 class="display-4">Car Merchandise</h4>
                 <form action=home.php method=get>
@@ -303,14 +302,14 @@ else{
 
 
 
-    <!-- PRODUCT CAROUSEL -->
+    <!-- PRODUCT MERCHANDISE -->
     <div class="container">
-        <div class="header-container">
+        <div class="header-container" style="color:white;">
             <span class="header">Best Sellers</span>
         </div>
         <br><br><br>
        
-        <div class="row text-center">
+        <div class="row text-center" style="color:white;">
         
             <div class="col-12">
                 <div class="owl-carousel owl-theme">
@@ -342,7 +341,7 @@ else{
                     </div>
                     <div class="row text-center">
                         <div class="col-12">
-                        <a href="women-top.php"><button class="btn btn-primary btn-md">See More</button></a>
+                        <a href="best-sellers.php"><button class="btn btn-primary btn-md">See More</button></a>
                         </div>
                      </div>
                 </div>
@@ -358,12 +357,12 @@ else{
 
     <!-- PRODUCT CAROUSEL -->
     <div class="container">
-        <div class="header-container">
+        <div class="header-container" style="color:white;">
             <span class="header">Car Accessories</span>
             </div>
         <br><br><br>
        
-        <div class="row text-center">
+        <div class="row text-center" style="color:white;">
         
             <div class="col-12">
                 <div class="owl-carousel owl-theme">
@@ -396,7 +395,7 @@ else{
                 </div>
                     <div class="row text-center">
                         <div class="col-12">
-                        <a href="women-bottom.php"><button class="btn btn-primary btn-md">See More</button></a>
+                        <a href="car-accessories.php"><button class="btn btn-primary btn-md">See More</button></a>
                         </div>
                      </div>
                 </div>
@@ -412,12 +411,12 @@ else{
 
     <!-- PRODUCT CAROUSEL -->
     <div class="container">
-        <div class="header-container">
+        <div class="header-container" style="color:white;">
             <span class="header">Jdm Clothing</span>
             </div>
         <br><br><br>
        
-        <div class="row text-center">
+        <div class="row text-center" style="color:white;">
         
             <div class="col-12">
                 <div class="owl-carousel owl-theme">
@@ -449,7 +448,7 @@ else{
                     </div>
                     <div class="row text-center">
                         <div class="col-12">
-                        <a href="women-dress.php"><button class="btn btn-primary btn-md">See More</button></a>
+                        <a href="jdm-clothing.php"><button class="btn btn-primary btn-md">See More</button></a>
                         </div>
                      </div>
                 </div>

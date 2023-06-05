@@ -130,7 +130,7 @@ else{
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LLC | Women's Tops</title>
+    <title>JDM | Best Sellers</title>
     <link rel="shortcut icon" type=image/x-icon href=images/icon.png>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome/css/all.css">
@@ -168,9 +168,9 @@ else{
                     </li>
                 
                     <li class="nav-item dropdown">
-                        <a href="women.php" class="nav-link dropbtn active-women" id=women>Women</a>
+                        <a href="merchandise.php" class="nav-link dropbtn active-women" id=women>Merchandise</a>
                         <div class="dropdown-content">
-                            <a href="women-top.php" class="active-women-dropdown">Top</a>
+                            <a href="best-sellers.php" class="active-women-dropdown">Best Sellers</a>
                             <a href="women-bottom.php">Bottom</a>
                             <a href="women-dress.php">Dress</a>
                         </div>
@@ -197,9 +197,9 @@ else{
                     </li>
                 
                     <li class="nav-item dropdown">
-                        <a href="women.php" class="nav-link dropbtn active-women" id=women>Women</a>
+                        <a href="merchandise.php" class="nav-link dropbtn active-women" id=women>Merchandise</a>
                         <div class="dropdown-content">
-                            <a href="women-top.php" class="active-women-dropdown">Top</a>
+                            <a href="best-sellers.php" class="active-women-dropdown">Best Sellers</a>
                             <a href="women-bottom.php">Bottom</a>
                             <a href="women-dress.php">Dress</a>
                         </div>
@@ -269,11 +269,10 @@ else{
     <br><br>
 
     
-    <!-- BANNER WOMEN -->
-    <div class="container">
-        <div class="row">
+    <!-- BANNER BEST SELLERS -->
+        <div class="inline" style="color:white;">
             <div class="col-12 women banner-image-container">
-                <h4 class="display-4">Women's Tops</h4>
+                <h4 class="display-4">Best Sellers</h4>
                 <form action=home.php method=get>
                 <div class="search-boxwomen">
                     <input class="search-input" name=searchitem  value="" type="text" placeholder="Search something..">
@@ -298,8 +297,8 @@ else{
 
 
 
-    <!-- WOMEN-TOPS ITEMS -->
-    <div class="container text-center">
+    <!-- BEST-SELLER ITEMS -->
+    <div class="container text-center" style="color:white;">
         <div class="row">
             <?php while($row = $wtops->fetch_array()){?>
             <div class="col-sm-6 col-md-4 col-lg-3">

@@ -3,235 +3,94 @@
 if(!isset($_SESSION)){
     session_start();
 }
-    include_once("connections/connect.php");
-    $con=connect();
+include_once("connections/connect.php");
+$con = connect();
 
-    if(isset($_POST['login'])){
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        
-        $sql= "SELECT * FROM tbluser where email = '$email' and password = '$password'";
-        $users = $con->query($sql) or die ($con->error);
-        $row = $users->fetch_assoc();
-        $total = $users->num_rows;
+if(isset($_POST['login'])){
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
+    $sql = "SELECT * FROM tbluser WHERE email = '$email' AND password = '$password'";
+    $users = $con->query($sql) or die ($con->error);
+    $row = $users->fetch_assoc();
+    $total = $users->num_rows;
 
-        if(($total>0)&&($row['Access']=="Admin")){
+    if(($total > 0) && ($row['Access'] == "Admin" || $row['Access'] == "User" || $row['Access'] == "Supervisor")){
+        $id = $row['userID'];
+        $_SESSION['ID'] = $row['userID'];
+        $_SESSION['UserLogIn'] = $row['email'];
+        $_SESSION['Access'] = $row['Access'];
+        $_SESSION['firstname'] = $row['Firstname'];
+        $_SESSION['lastname'] = $row['Lastname'];
+        $_SESSION['photo'] = $row['photo'];
 
-            $id=$row['userID'];
-            $_SESSION['ID']=$row['userID'];
-            $_SESSION['UserLogIn'] = $row['email'];
-            $_SESSION['Access'] = $row['Access'];
-            $_SESSION['firstname']=$row['Firstname'];
-            $_SESSION['lastname']=$row['Lastname'];
-            $_SESSION['photo']=$row['photo'];
+        if($row['status'] == "offline.png"){
+            $sql = "UPDATE tbluser SET `status`='online.png' WHERE `userID`='$id'";
+            $con->query($sql) or die ($con->error);
+        }
 
-            if($row['status']=="online.png"){
-                $_SESSION['message'] = "<script>
-                $(function() {
-                    $.notify({
-                        message: 'Account is currently logged in' 
-                    },{
-                        animate: {
-                            enter: 'animate__animated animate__fadeInDown',
-                            exit: 'animate__animated animate__fadeOutLeft'
-                        },
-                        delay: 2000,
-                        placement: {
-                            from: 'bottom',
-                            align: 'left'
-                        },
-                        type: 'danger'
-                    });
-                });
-                </script>";
-                unset($_SESSION['UserLogIn']);
-                unset($_SESSION['Access']);
-            }
-            else{
-            
-            $_SESSION['message'] = "<script>
-            $(function() {
-                $.notify({
-                    message: 'Admin Login Successful!'
-                },{
-                    animate: {
-                        enter: 'animate__animated animate__fadeInDown',
-                        exit: 'animate__animated animate__fadeOutLeft'
-                    },
-                    delay: 2000,
-                    placement: {
-                        from: 'bottom',
-                        align: 'left'
-                    },
-                    type: 'success'
-                });
+        if($row['Access'] == "User"){
+            $_SESSION['houseno'] = $row['HouseNo'];
+            $_SESSION['street'] = $row['Street'];
+            $_SESSION['brgy'] = $row['Brgy'];
+            $_SESSION['city'] = $row['City'];
+            $_SESSION['prov'] = $row['Province'];
+            $_SESSION['contact'] = $row['phone'];
+        }
+
+        $_SESSION['message'] = "<script>
+        $(function() {
+            $.notify({
+                message: '". $row['Access'] ." Login Successful!'
+            },{
+                animate: {
+                    enter: 'animate__animated animate__fadeInDown',
+                    exit: 'animate__animated animate__fadeOutLeft'
+                },
+                delay: 2000,
+                placement: {
+                    from: 'bottom',
+                    align: 'left'
+                },
+                type: 'success'
             });
-            </script>";
-            
-            if($row['status']=="offline.png"){
-                $sql= "UPDATE tbluser SET `status`='online.png' WHERE `userID`='$id'";
-                $con->query($sql) or die ($con->error);
-            }
+        });
+        </script>";
 
+        if($row['Access'] == "Admin" || $row['Access'] == "Supervisor"){
             echo header("Refresh:1; url=accounts.php");
         }
-            
-        }
-        else if(($total>0)&&($row['Access']=="User")){
-
-            $id=$row['userID'];
-            $_SESSION['ID']=$row['userID'];
-            $_SESSION['UserLogIn'] = $row['email'];
-            $_SESSION['Access'] = $row['Access'];
-            $_SESSION['firstname']=$row['Firstname'];
-            $_SESSION['lastname']=$row['Lastname'];
-            $_SESSION['photo']=$row['photo'];
-
-            $_SESSION['houseno']=$row['HouseNo'];
-            $_SESSION['street']=$row['Street'];
-            $_SESSION['brgy']=$row['Brgy'];
-            $_SESSION['city']=$row['City'];
-            $_SESSION['prov']=$row['Province'];
-            $_SESSION['contact']=$row['phone'];
-            
-        if($row['status']=="online.png"){
-            $_SESSION['message'] = "<script>
-            $(function() {
-                $.notify({
-                    message: 'Account is currently logged in' 
-                },{
-                    animate: {
-                        enter: 'animate__animated animate__fadeInDown',
-                        exit: 'animate__animated animate__fadeOutLeft'
-                    },
-                    delay: 2000,
-                    placement: {
-                        from: 'bottom',
-                        align: 'left'
-                    },
-                    type: 'danger'
-                });
-            });
-            </script>";
-            unset($_SESSION['UserLogIn']);
-            unset($_SESSION['Access']);
-        }
-        else{
-            
-            $_SESSION['message'] = "<script>
-            $(function() {
-                $.notify({
-                    message: 'User Login Successful!'
-                },{
-                    animate: {
-                        enter: 'animate__animated animate__fadeInDown',
-                        exit: 'animate__animated animate__fadeOutLeft'
-                    },
-                    delay: 2000,
-                    placement: {
-                        from: 'bottom',
-                        align: 'left'
-                    },
-                    type: 'success'
-                });
-            });
-            </script>";
-
-            if($row['status']=="offline.png"){
-                $sql= "UPDATE tbluser SET `status`='online.png' WHERE `userID`='$id'";
-                $con->query($sql) or die ($con->error);
-            }
-
+        else if($row['Access'] == "User"){
             echo header("Refresh:1; url=home.php");
         }
-        }
-        else if(($total>0)&&($row['Access']=="Supervisor")){
-
-            $id=$row['userID'];
-            $_SESSION['ID']=$row['userID'];
-            $_SESSION['UserLogIn'] = $row['email'];
-            $_SESSION['Access'] = $row['Access'];
-            $_SESSION['firstname']=$row['Firstname'];
-            $_SESSION['lastname']=$row['Lastname'];
-            $_SESSION['photo']=$row['photo'];
-
-            if($row['status']=="online.png"){
-                $_SESSION['message'] = "<script>
-                $(function() {
-                    $.notify({
-                        message: 'Account is currently logged in' 
-                    },{
-                        animate: {
-                            enter: 'animate__animated animate__fadeInDown',
-                            exit: 'animate__animated animate__fadeOutLeft'
-                        },
-                        delay: 2000,
-                        placement: {
-                            from: 'bottom',
-                            align: 'left'
-                        },
-                        type: 'danger'
-                    });
-                });
-                </script>";
-                unset($_SESSION['UserLogIn']);
-                unset($_SESSION['Access']);
-            }
-            else{
-            $_SESSION['message'] = "<script>
-            $(function() {
-                $.notify({
-                    message: 'Supervisor Login Successful!'
-                },{
-                    animate: {
-                        enter: 'animate__animated animate__fadeInDown',
-                        exit: 'animate__animated animate__fadeOutLeft'
-                    },
-                    delay: 2000,
-                    placement: {
-                        from: 'bottom',
-                        align: 'left'
-                    },
-                    type: 'success'
-                });
-            });
-            </script>";
-
-            if($row['status']=="offline.png"){
-                $sql= "UPDATE tbluser SET `status`='online.png' WHERE `userID`='$id'";
-                $con->query($sql) or die ($con->error);
-            }
-
-            echo header("Refresh:1; url=accounts.php");
-        }
-        }
-    
-        else{
-            $_SESSION['message'] = "<script>
-            $(function() {
-                $.notify({
-                    message: 'Invalid Email Address And Password!' 
-                },{
-                    animate: {
-                        enter: 'animate__animated animate__fadeInDown',
-                        exit: 'animate__animated animate__fadeOutLeft'
-                    },
-                    delay: 2000,
-                    placement: {
-                        from: 'bottom',
-                        align: 'left'
-                    },
-                    type: 'danger'
-                });
-            });
-            </script>";
-        }
     }
-    if(isset($_POST['register'])){
-        echo header("Location: Register.php");
+    else{
+        $_SESSION['message'] = "<script>
+        $(function() {
+            $.notify({
+                message: 'Invalid Email Address and Password!' 
+            },{
+                animate: {
+                    enter: 'animate__animated animate__fadeInDown',
+                    exit: 'animate__animated animate__fadeOutLeft'
+                },
+                delay: 2000,
+                placement: {
+                    from: 'bottom',
+                    align: 'left'
+                },
+                type: 'danger'
+            });
+        });
+        </script>";
     }
-    ?>
+}
+
+if(isset($_POST['register'])){
+    echo header("Location: Register.php");
+}
+?>
+
     <!DOCTYPE html>
 <html lang="en">
 <head>

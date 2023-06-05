@@ -22,7 +22,7 @@ $update=false;
 $User=false;
 $signup=false;
 
-$mysqli=new mysqli('localhost', 'root', '','onlineorderingsystem') or die ($mysqli_error($mysqli));
+$mysqli=new mysqli('localhost', 'root', '','crud_db') or die ($mysqli_error($mysqli));
     
 $sql = "SELECT * FROM tbluser WHERE `Access`='User'";
 $users = $con->query($sql) or die ($con->error);
