@@ -147,11 +147,11 @@ else{
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.js"></script>
 </head>
-<body>
+<body style="color:#fff; background-color:#000;">
 
 
     <!-- NAVIGATION -->
-    <nav class="navbar navbar-expand-md sticky-top navigation" >
+    <nav class="navbar navbar-expand-md sticky-top navigation">
         <div class="container-fluid">
             <a href="home.php" class="navbar-brand logo-container"><img src="images/Logo.png" alt="" class="logo"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
@@ -171,10 +171,10 @@ else{
                             </li>
                         
                             <li class="nav-item dropdown">
-                                <a href="merchandise.php" class="nav-link dropbtn active-women" id=women>Merchandise</a>
+                                <a href="merchandise.php" class="nav-link dropbtn">Merchandise</a>
                                 <div class="dropdown-content">
                                     <a href="best-sellers.php">Best Sellers</a>
-                                    <a href="car-accessories.php">Car Accessories</a>
+                                    <a href="car-accessories.php">Accessories</a>
                                     <a href="jdm-clothing.php">Jdm Clothing</a>
                                 </div>
                             </li>
@@ -200,10 +200,10 @@ else{
                             </li>
                         
                             <li class="nav-item dropdown">
-                                <a href="merchandise.php" class="nav-link dropbtn active-women" id=women>Merchandise</a>
+                                <a href="merchandise.php" class="nav-link dropbtn">Merchandise</a>
                                 <div class="dropdown-content">
                                     <a href="best-sellers.php">Best Sellers</a>
-                                    <a href="car-accessories.php">Car Accessories</a>
+                                    <a href="car-accessories.php">Accessories</a>
                                     <a href="jdm-clothing.php">Jdm Clothing</a>
                                 </div>
                             </li>
@@ -284,7 +284,7 @@ else{
                     <button class="search-btn"><i class="fas fa-search"></i></a></button>
                     <?php if (isset($_SESSION['UserLogIn'])){ ?>
                         <a href="cart.php" class="nav-link cart-button">
-                                <i class="fas fa-shopping-cart" style="font-size: 25px"></i>
+                                <i class="fas fa-shopping-cart" style="font-size: 25px;"></i>
                             </a>
                         <?php } else{?>
                             <a href="LogIn.php" class="nav-link cart-button">
@@ -302,7 +302,7 @@ else{
 
 
 
-    <!-- PRODUCT MERCHANDISE -->
+    <!-- PRODUCT CAROUSEL -->
     <div class="container">
         <div class="header-container" style="color:white;">
             <span class="header">Best Sellers</span>
@@ -341,7 +341,7 @@ else{
                     </div>
                     <div class="row text-center">
                         <div class="col-12">
-                        <a href="best-sellers.php"><button class="btn btn-primary btn-md">See More</button></a>
+                        <a href="best-sellers.php"><button class="btn btn-primary btn-md" style="background-color: #bf2e2e; border-color: #bf2e2e;">See More</button></a>
                         </div>
                      </div>
                 </div>
@@ -395,7 +395,7 @@ else{
                 </div>
                     <div class="row text-center">
                         <div class="col-12">
-                        <a href="car-accessories.php"><button class="btn btn-primary btn-md">See More</button></a>
+                        <a href="car-accessories.php"><button class="btn btn-primary btn-md" style="background-color: #bf2e2e; border-color: #bf2e2e;">See More</button></a>
                         </div>
                      </div>
                 </div>
@@ -448,7 +448,7 @@ else{
                     </div>
                     <div class="row text-center">
                         <div class="col-12">
-                        <a href="jdm-clothing.php"><button class="btn btn-primary btn-md">See More</button></a>
+                        <a href="jdm-clothing.php"><button class="btn btn-primary btn-md" style="border-color:#bf2e2e; background-color:#bf2e2e;">See More</button></a>
                         </div>
                      </div>
                 </div>
@@ -467,8 +467,8 @@ else{
     <!-- FOOTER -->
  <footer>
         <div class="container-fluid footer">
-            <div class="row">
-                <div class="col-sm-6 col-lg-3">
+            <div class="row" style="justify-content: space-around;">
+                <div class="col-sm-6 col-lg-3" align="left">
                     <h4 class="display-4 name">Lifestyle Clothing Co.</h4>
                     <p class="lead">
                         As Asia’s Online Fashion Destination, we create endless style possibilities through 
@@ -476,19 +476,8 @@ else{
                     brands, putting you at the centre of it all. With Lifestyle Clothing Co., You Own Now.
                     </p>
                 </div>
-                <div class="col-sm-6 col-lg-3">
-                    <p class="lead">Help Center:</p>
-                    <div class="row">
-                        <div class="col-12">
-                            <a href="#">Location</a><br>
-                            <a href="#">Contact Us</a><br>
-                            <a href="#">Privacy Policy</a><br>
-                            <a href="#">Terms And Conditions</a><br>
-                            <a href="#">Frequently Asked Questions (FAQs)</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
+
+                <div class="col-sm-6 col-lg-3" align="center">
                     <p class="lead">Follow Us On:</p>
                     <div class="col-12 social">
                         <a href="#"><span class="fab fa-facebook"></span> Facebook</a><br>
@@ -497,13 +486,13 @@ else{
                         <a href="#"><span class="fab fa-youtube"></span> YouTube</a><br>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-3">
+                <div class="col-sm-6 col-lg-3" align="center">
                     <p class="lead">Email Us:</p>
                     <div class="textbox">
                         <input type="text" placeholder="Write Your Thoughts">
                     </div>
                     <div class="button">
-                        <a href="mailto:" class="btn btn-primary">Send</a>
+                    <a href="mailto:" class="btn btn-primary" style="border-color:#bf2e2e; background-color:#bf2e2e;">Send</a>
                     </div>
                 </div>
             </div>

@@ -142,7 +142,7 @@ else{
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>JDM | About</title>
     <link rel="shortcut icon" type=image/x-icon href=images/icon.png>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome/css/all.css">
@@ -623,7 +623,7 @@ else{
                 </div>
                     <div class="row text-center">
                         <div class="col-12">
-                        <a href="kids-toddlers.php"><button class="btn btn-primary btn-md">See More</button></a>
+                        <a href="kids-toddlers.php"><button class="btn btn-primary btn-md" style="border-color:#bf2e2e; background-color:#bf2e2e;">See More</button></a>
                         </div>
                      </div>
             </div>
@@ -647,8 +647,8 @@ else{
     <!-- FOOTER -->
  <footer>
         <div class="container-fluid footer">
-            <div class="row">
-                <div class="col-sm-6 col-lg-3">
+            <div class="row" style="justify-content: space-around;">
+                <div class="col-sm-6 col-lg-3" align="left">
                     <h4 class="display-4 name">Lifestyle Clothing Co.</h4>
                     <p class="lead">
                         As Asia’s Online Fashion Destination, we create endless style possibilities through 
@@ -656,19 +656,8 @@ else{
                     brands, putting you at the centre of it all. With Lifestyle Clothing Co., You Own Now.
                     </p>
                 </div>
-                <div class="col-sm-6 col-lg-3">
-                    <p class="lead">Help Center:</p>
-                    <div class="row">
-                        <div class="col-12">
-                            <a href="#">Location</a><br>
-                            <a href="#">Contact Us</a><br>
-                            <a href="#">Privacy Policy</a><br>
-                            <a href="#">Terms And Conditions</a><br>
-                            <a href="#">Frequently Asked Questions (FAQs)</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
+
+                <div class="col-sm-6 col-lg-3" align="center">
                     <p class="lead">Follow Us On:</p>
                     <div class="col-12 social">
                         <a href="#"><span class="fab fa-facebook"></span> Facebook</a><br>
@@ -677,13 +666,13 @@ else{
                         <a href="#"><span class="fab fa-youtube"></span> YouTube</a><br>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-3">
+                <div class="col-sm-6 col-lg-3" align="center">
                     <p class="lead">Email Us:</p>
                     <div class="textbox">
                         <input type="text" placeholder="Write Your Thoughts">
                     </div>
                     <div class="button">
-                        <a href="mailto:" class="btn btn-primary">Send</a>
+                    <a href="mailto:" class="btn btn-primary" style="border-color:#bf2e2e; background-color:#bf2e2e;">Send</a>
                     </div>
                 </div>
             </div>

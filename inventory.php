@@ -603,7 +603,7 @@ else{
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventory</title>
+    <title>JDM | Inventory</title>
     <link rel="shortcut icon" type=image/x-icon href=images/icon.png>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -621,7 +621,7 @@ else{
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap-notify.min.js"></script>
 </head>
-<body>
+<body style="color:#fff; background-color:#000;">
 
     <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-md sticky-top navigation">
@@ -944,7 +944,7 @@ else{
 
                     <?php while($row = $inventory->fetch_array()){ ?>
                     <tbody>
-                        <tr>
+                        <tr style="color:#fff;">
                             <th scope="row"><?php echo $row['productID'];?></th>
                             <td><img src="<?php echo 'images/products/'.$row['photo']?>"width="90" height="90"></td>
                             <td><?php echo $row['productName'];?></td>
@@ -969,8 +969,8 @@ else{
    <!-- FOOTER -->
    <footer>
         <div class="container-fluid footer">
-            <div class="row">
-                <div class="col-sm-6 col-lg-3">
+            <div class="row" style="justify-content: space-around;">
+                <div class="col-sm-6 col-lg-3" align="left">
                     <h4 class="display-4 name">Lifestyle Clothing Co.</h4>
                     <p class="lead">
                     As Asia’s Online Fashion Destination, we create endless style possibilities through 
@@ -978,19 +978,8 @@ else{
                     brands, putting you at the centre of it all. With Lifestyle Clothing Co., You Own Now.
                     </p>
                 </div>
-                <div class="col-sm-6 col-lg-3">
-                    <p class="lead">Help Center:</p>
-                    <div class="row">
-                        <div class="col-12">
-                            <a href="#">Location</a><br>
-                            <a href="#">Contact Us</a><br>
-                            <a href="#">Privacy Policy</a><br>
-                            <a href="#">Terms And Conditions</a><br>
-                            <a href="#">Frequently Asked Questions (FAQs)</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
+
+                <div class="col-sm-6 col-lg-3" align="center">
                     <p class="lead">Follow Us On:</p>
                     <div class="col-12 social">
                         <a href="#"><span class="fab fa-facebook"></span> Facebook</a><br>
@@ -999,13 +988,13 @@ else{
                         <a href="#"><span class="fab fa-youtube"></span> YouTube</a><br>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-3">
+                <div class="col-sm-6 col-lg-3" align="center">
                     <p class="lead">Email Us:</p>
                     <div class="textbox">
                         <input type="text" placeholder="Write Your Thoughts">
                     </div>
                     <div class="button">
-                        <a href="mailto:" class="btn btn-primary">Send</a>
+                    <a href="mailto:" class="btn btn-primary" style="background-color: #bf2e2e; border-color: #bf2e2e;">Send</a>
                     </div>
                 </div>
             </div>

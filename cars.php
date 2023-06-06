@@ -25,7 +25,7 @@ $con=connect();
         $data1 = $con->query($sql) or die ($con->error);
         $sql = "SELECT * FROM tblinventory where `type`='New' AND `category`='Cars' order by rand() LIMIT 9";
         $data2 = $con->query($sql) or die ($con->error);
-        $sql = "SELECT * FROM tblinventory where `type`='Formal Attire' AND `category`='Men' order by rand() LIMIT 9";
+        $sql = "SELECT * FROM tblinventory where `type`='Classic' AND `category`='Cars' order by rand() LIMIT 9";
         $data3 = $con->query($sql) or die ($con->error);
 
         $sql=  "SELECT * FROM tbltransaction";
@@ -145,7 +145,7 @@ else{
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.js"></script>
 </head>
-<body>
+<body style="background-color:black;">
 
 
     <!-- NAVIGATION -->
@@ -158,9 +158,9 @@ else{
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <?php if (isset($_SESSION['UserLogIn'])){ ?>
-                        <ul class="navbar-nav ">
+                        <ul class="navbar-nav">
                             <li class="nav-item dropdown">
-                                <a href="cars.php" class="nav-link dropbtn active-men">Cars</a>
+                                <a href="cars.php" class="nav-link dropbtn">Cars</a>
                                 <div class="dropdown-content">
                                     <a href="hot-deals.php">Hot Deals</a>
                                     <a href="new-arrival.php">New Arrival</a>
@@ -178,7 +178,7 @@ else{
                             </li>
                         
                             <li class="nav-item dropdown">
-                                <a href="merchandise.php" class="nav-link dropbtn">About</a>
+                                <a href="about.php" class="nav-link dropbtn">About</a>
                                 <div class="dropdown-content">
                                     <a href="kids-boys.php">Boys</a>
                                     <a href="kids-girls.php">Girls</a>
@@ -188,9 +188,9 @@ else{
                         </ul>
                     
                     <?php } else{ ?>
-                        <ul class="navbar-nav ">
+                        <ul class="navbar-nav">
                             <li class="nav-item dropdown">
-                                <a href="cars.php" class="nav-link dropbtn active-men">Cars</a>
+                                <a href="cars.php" class="nav-link dropbtn">Cars</a>
                                 <div class="dropdown-content">
                                     <a href="hot-deals.php">Hot Deals</a>
                                     <a href="new-arrival.php">New Arrival</a>
@@ -218,7 +218,6 @@ else{
                         </ul>
                     <?php }?>
 
-                    
                     <?php if($signup==true){?>
                     <li class="nav-item" id="account">
                     <div class="navbar-collapse" id="navbar-list-4">
@@ -229,8 +228,8 @@ else{
                                 <img src="<?php echo 'images/avatars/'.$_SESSION['photo']?>" width="30" height="30" class="rounded-circle">
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a href="user-account.php" class="dropdown-item"><i class="fas fa-shopping-bag"></i> &nbspMy Orders</a>
-                                    <a href="LogOut.php?logout=<?php echo $_SESSION['ID']?>" class="dropdown-item" name=logout><span class="fas fa-sign-out-alt"></span>&nbsp&nbspLogout</a>
+                                <a href="user-account.php" class="dropdown-item"><i class="fas fa-shopping-bag"></i> &nbspMy Orders</a>
+                                <a href="LogOut.php?logout=<?php echo $_SESSION['ID']?>" class="dropdown-item" name=logout><span class="fas fa-sign-out-alt"></span>&nbsp&nbspLogout</a>
                                 </div>
                             </li>
                             <?php } else { ?>
@@ -248,8 +247,6 @@ else{
                         <a href="sign-up.php"  class="nav-link">Sign Up</a>
                     </li>
                     <?php }?>
-
-
                     <?php if (isset($_SESSION['UserLogIn'])){ ?>
                         <?php if($count!='0'){?>
                             <style>.cart-button:before {content: "<?php echo $count ?>"}</style>
@@ -273,7 +270,6 @@ else{
 
     <!-- BANNER CARS -->
     <div class="inline">
-        
             <div class="col-12 men banner-image-container" style="color:white;">
                 <h4 class="display-4">Car Categories</h4>
             <form action=home.php method=get>
@@ -303,12 +299,13 @@ else{
 
 
     <!-- PRODUCT CAROUSEL -->
+    <div class="inline">
         <div class="header-container" style="color:white;">
             <span class="header">Hot Deals</span>
         </div>
         <br><br><br>
        
-        <div class="row text-center" style="color:white;">
+        <div class="row text-center" style="color:#fff;">
         
             <div class="col-12">
                 <div class="owl-carousel owl-theme">
@@ -338,7 +335,7 @@ else{
                     </div>
                     <div class="row text-center">
                         <div class="col-12">
-                            <a href="hot-deals.php"><button class="btn btn-primary btn-md">See More</button></a>
+                        <a href="hot-deals.php"><button class="btn btn-primary btn-md" style="background-color: #bf2e2e; border-color: #bf2e2e;">See More</button></a>
                         </div>
                      </div>
                 </div>
@@ -355,6 +352,7 @@ else{
     
 
     <!-- PRODUCT CAROUSEL -->
+    <div class="inline">
         <div class="header-container" style="color:white;">
             <span class="header">New Arrival</span>
         </div>
@@ -392,7 +390,7 @@ else{
                     </div>
                     <div class="row text-center">
                         <div class="col-12">
-                        <a href="new-arrival.php"><button class="btn btn-primary btn-md">See More</button></a>
+                        <a href="new-arrival.php"><button class="btn btn-primary btn-md" style="background-color: #bf2e2e; border-color: #bf2e2e;">See More</button></a>
                         </div>
                      </div>
                 </div>
@@ -409,7 +407,7 @@ else{
 
 
     <!-- PRODUCT CAROUSEL -->
-    
+    <div class="inline">
         <div class="header-container" style="color:white;">
             <span class="header">Jdm Classics</span>
         </div>
@@ -425,7 +423,7 @@ else{
                         <div class="item-container">
                         <div class="item-image-container">
                         <a href="home.php?select=<?php echo $row['productID']?>"><button type=submit name=select id=select><img src="<?php echo "images/products/".$row['photo']?>" alt=""></button></a>
-                            <?php if($row['category']=="Men"){?>
+                            <?php if($row['category']=="Cars"){?>
                                     <div class="shape men"><?php echo "₱".$row['price']?></div>
                                 <?php } else if($row['category']=="Cars"){?>
                                     <div class="shape women"><?php echo "₱".$row['price']?></div>
@@ -447,7 +445,7 @@ else{
                     </div>
                     <div class="row text-center">
                         <div class="col-12">
-                        <a href="jdm-classics.php"><button class="btn btn-primary btn-md">See More</button></a>
+                        <a href="jdm-classics.php"><button class="btn btn-primary btn-md" style="background-color: #bf2e2e; border-color: #bf2e2e;">See More</button></a>
                         </div>
                      </div>
                 </div>
@@ -467,8 +465,8 @@ else{
     <!-- FOOTER -->
  <footer>
         <div class="container-fluid footer">
-            <div class="row">
-                <div class="col-sm-6 col-lg-3">
+            <div class="row" style="justify-content: space-around;">
+                <div class="col-sm-6 col-lg-3" align="left">
                     <h4 class="display-4 name">Lifestyle Clothing Co.</h4>
                     <p class="lead">
                         As Asia’s Online Fashion Destination, we create endless style possibilities through 
@@ -476,19 +474,8 @@ else{
                     brands, putting you at the centre of it all. With Lifestyle Clothing Co., You Own Now.
                     </p>
                 </div>
-                <div class="col-sm-6 col-lg-3">
-                    <p class="lead">Help Center:</p>
-                    <div class="row">
-                        <div class="col-12">
-                            <a href="#">Location</a><br>
-                            <a href="#">Contact Us</a><br>
-                            <a href="#">Privacy Policy</a><br>
-                            <a href="#">Terms And Conditions</a><br>
-                            <a href="#">Frequently Asked Questions (FAQs)</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
+                
+                <div class="col-sm-6 col-lg-3" align="center">
                     <p class="lead">Follow Us On:</p>
                     <div class="col-12 social">
                         <a href="#"><span class="fab fa-facebook"></span> Facebook</a><br>
@@ -497,13 +484,13 @@ else{
                         <a href="#"><span class="fab fa-youtube"></span> YouTube</a><br>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-3">
+                <div class="col-sm-6 col-lg-3" align="center">
                     <p class="lead">Email Us:</p>
                     <div class="textbox">
                         <input type="text" placeholder="Write Your Thoughts">
                     </div>
                     <div class="button">
-                        <a href="mailto:" class="btn btn-primary">Send</a>
+                    <a href="mailto:" class="btn btn-primary" style="background-color: #bf2e2e; border-color: #bf2e2e;">Send</a>
                     </div>
                 </div>
             </div>

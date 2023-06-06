@@ -43,7 +43,7 @@ $con=connect();
         if(isset($_GET['searchitem'])){ 
             $searchkey=$_GET['searchitem'];
             if($searchkey==""){
-                echo header("Location:home.php");
+                echo header("Refresh: 0 url=home.php");
             }
            
             $sql = "SELECT * FROM tblinventory WHERE `productName` like '%$searchkey%' OR `type` like '%$searchkey%' OR `category` like '%$searchkey%' OR `subcategory` like '%$searchkey%' OR `itemdesc1` like '%$searchkey%' OR `itemdesc2` like '%$searchkey%' OR `itemdesc2` like '%$searchkey%'";
@@ -393,7 +393,7 @@ else{
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JDMania Autodeals</title>
+    <title>JDM | Autodeals</title>
     <link rel="shortcut icon" type=image/x-icon href=images/icon.png>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome/css/all.css">
@@ -410,7 +410,7 @@ else{
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap-notify.min.js"></script>
 </head>
-<body onload="document.getElementById('ratings').innerHTML = getRndInteger(50,100)">
+<body onload="document.getElementById('ratings').innerHTML = getRndInteger(50,100)" style="color:#fff; background-color:black;">
 
 
 
@@ -443,9 +443,9 @@ else{
                     <li class="nav-item dropdown">
                         <a href="merchandise.php" class="nav-link dropbtn">Merchandise</a>
                         <div class="dropdown-content">
-                            <a href="women-top.php">Top</a>
-                            <a href="women-bottom.php">Bottom</a>
-                            <a href="women-dress.php">Dress</a>
+                            <a href="best-sellers.php">Best Sellers</a>
+                            <a href="car-accessories.php">Accessories</a>
+                            <a href="jdm-clothing.php">Jdm Clothing</a>
                         </div>
                     </li>
                 
@@ -464,18 +464,18 @@ else{
                     <li class="nav-item dropdown">
                         <a href="cars.php" class="nav-link dropbtn">Cars</a>
                         <div class="dropdown-content">
-                            <a href="men-top.php">Top</a>
-                            <a href="men-bottom.php">Bottom</a>
-                            <a href="men-formal-attire.php">Formal Attire</a>
+                            <a href="hot-deals.php">Hot Deals</a>
+                            <a href="new-arrival.php">New Arrival</a>
+                            <a href="jdm-classics.php">Classic Cars</a>
                         </div>
                     </li>
                 
                     <li class="nav-item dropdown">
                         <a href="merchandise.php" class="nav-link dropbtn">Merchandise</a>
                         <div class="dropdown-content">
-                            <a href="women-top.php">Top</a>
-                            <a href="women-bottom.php">Bottom</a>
-                            <a href="women-dress.php">Dress</a>
+                            <a href="best-sellers.php">Best Sellers</a>
+                            <a href="car-accessories.php">Accessories</a>
+                            <a href="jdm-clothing.php">Jdm Clothing</a>
                         </div>
                     </li>
                 
@@ -609,7 +609,7 @@ else{
 
                         <div class="row checkout-express" id=buy>
                                 <div class="col-12">
-                                    <button class="btn btn-primary btn-block add" type=submit name=add>Add To Cart <i class="fas fa-cart-plus align-middle"></i></button>
+                                <button class="btn btn-primary btn-block add" style="border-color:#bf2e2e; background-color:#bf2e2e;" type=submit name=add>Add To Cart <i class="fas fa-cart-plus align-middle"></i></button>
                                 </div>
                                 <div class="col-6">
                                     <!-- <button class="btn btn-success btn-block" onclick="enablepayment()" type=submit name=buy>Buy Now</button> -->
@@ -622,7 +622,7 @@ else{
                                     <p class="lead">Payment Methods</p>
                                 </div>
                                 <div class="col-6">
-                                <button class="btn btn-block btn-primary cod" type=submit id="btn-cod" name=cod>Cash On Delivery <i class="fas fa-truck align-middle"></i></button>
+                                <button class="btn btn-block btn-primary cod" style="border-color:#bf2e2e; background-color:#bf2e2e;" type=submit id="btn-cod" name=cod>Cash On Delivery <i class="fas fa-truck align-middle"></i></button>
                                 </div>
 
                                 <div class="col-6">
@@ -657,7 +657,7 @@ else{
 
                          
 <!-- EXPRESS PAYMENT -->
-<div id="online" stryle="display: none">
+<div id="online" style="display: none">
     <div class="row checkout-express">
         <br><br>
       
@@ -689,7 +689,6 @@ else{
                 </div>
             </div>
        
-        
 
     <?php } else {?>
 
@@ -709,7 +708,7 @@ else{
                 <div class="carousel-caption">
                     <h1 class="display-4">JDMania JDM Collections</h1>
                     <p class="lead">Sports and classic vehicle exporters located in central Japan</p>
-                    <a href="home.php#about"><button type="button" class="btn btn-primary btn-md">Learn More</button></a>
+                    <a href="home.php#about"><button type="button" class="btn btn-primary btn-md" style="background-color: #bf2e2e; border-color: #bf2e2e;">Learn More</button></a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -717,7 +716,7 @@ else{
                 <div class="carousel-caption">
                     <h1 class="display-4">Take a look at our finest collection</h1>
                     <p class="lead">Premium products all around the shop</p>
-                    <a href="home.php#about"><button type="button" class="btn btn-primary btn-md">Learn More</button></a>
+                    <a href="home.php#about"><button type="button" class="btn btn-primary btn-md" style="background-color: #bf2e2e; border-color: #bf2e2e;">Learn More</button></a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -725,7 +724,7 @@ else{
                 <div class="carousel-caption">
                     <h1 class="display-4">You won't regret buying from us</h1>
                     <p class="lead">Our products can last forever</p>
-                    <a href="home.php#about"><button type="button" class="btn btn-primary btn-md">Learn More</button></a>
+                    <a href="home.php#about"><button type="button" class="btn btn-primary btn-md" style="background-color: #bf2e2e; border-color: #bf2e2e;">Learn More</button></a>
                 </div>
             </div>
           <form method=get>
@@ -801,7 +800,7 @@ else{
                         
                             </div>
                             
-                             <div class="item-description-container">
+                            <div class="item-description-container" style="color:white;">
                                     <h5><?php echo $rows['productName']?></h5>
                                     <p><?php echo $rows['itemdesc1']?></p>
                                     <span class="fa fa-star"></span>
@@ -822,7 +821,7 @@ else{
 <?php } else {?>
 
     <!-- OUR CATEGORIES -->
-    <div class="container">
+    <div class="container" style="color:white;">
         <div class="header-container">
             <span class="header">Categories</span>
         </div>
@@ -830,11 +829,11 @@ else{
         <div class="row text-center categories">
             <div class="col-xs-12 col-sm-6 col-lg-4 overlay">
                 <a href="cars.php"><img src="images/home/car categories.jpg" alt="Cars"></a>
-                <h4>Shop Cars</h4>
+                <h4>Cars</h4>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 overlay">
                 <a href="merchandise.php"><img src="images/home/car merchandise.jpg" alt="Merchandise"></a>
-                <h4>Shop Merchandise</h4>
+                <h4>Merchandise</h4>
             </div>
             <div class="col-xs-12 col-sm-6 col-lg-4 overlay">
                 <a href="about.php"><img src="images/home/all about.jpg" alt="About"></a>
@@ -848,7 +847,7 @@ else{
 
 
     <!-- FEATURED PRODUCTS -->
-    <div class="container">
+    <div class="container" style="color:white;">
         <div class="header-container">
             <span class="header">Featured Products</span>
         </div>
@@ -867,7 +866,7 @@ else{
                                         <div class="shape merchandise"><?php echo "₱".$row['price']?></div>
                                     <?php }?>
                                 </div>
-                                <div class="item-description-container">
+                                <div class="item-description-container" style="color:white;">
                                     <h5><?php echo $row['productName']?></h5>
                                     <p><?php echo $row['itemdesc1']?></p>
                                     <span class="fa fa-star"></span>
@@ -892,7 +891,7 @@ else{
 
 
     <!-- BEST SELLERS -->
-    <div class="container">
+    <div class="container" style="color:white;">
         <div class="header-container">
             <span class="header">Best Sellers</span>
         </div>
@@ -911,7 +910,7 @@ else{
                                         <div class="shape merchandise"><?php echo "₱".$row['price']?></div>
                                     <?php }?>
                                 </div>
-                                <div class="item-description-container">
+                                <div class="item-description-container" style="color:white;">
                                     <h5><?php echo $row['productName']?></h5>
                                     <p><?php echo $row['itemdesc2']?></p>
                                     <span class="fa fa-star"></span>
@@ -936,7 +935,7 @@ else{
 
 
     <!-- DAILY DISCOVER -->
-    <div class="container">
+    <div class="container" style="color:white;">
         <div class="header-container">
             <span class="header">Daily Discover</span>
         </div>
@@ -957,7 +956,7 @@ else{
                                         <div class="shape kids"><?php echo "₱".$row['price']?></div>
                                     <?php }?>
                                 </div>
-                                <div class="item-description-container">
+                                <div class="item-description-container" style="color:white;">
                                     <h5><?php echo $row['productName']?></h5>
                                     <p><?php echo $row['itemdesc3']?></p>
                                     <span class="fa fa-star"></span>
@@ -1006,8 +1005,8 @@ else{
     <!-- FOOTER -->
     <footer>
         <div class="container-fluid footer">
-            <div class="row">
-                <div class="col-sm-6 col-lg-3">
+            <div class="row" style="justify-content: space-around;">
+                <div class="col-sm-6 col-lg-3" align="left">
                     <h4 class="display-4 name">Lifestyle Clothing Co.</h4>
                     <p class="lead">
                     As Asia’s Online Fashion Destination, we create endless style possibilities through 
@@ -1015,19 +1014,8 @@ else{
                     brands, putting you at the centre of it all. With Lifestyle Clothing Co., You Own Now.
                     </p>
                 </div>
-                <div class="col-sm-6 col-lg-3">
-                    <p class="lead">Help Center:</p>
-                    <div class="row">
-                        <div class="col-12">
-                            <a href="#">Location</a><br>
-                            <a href="#">Contact Us</a><br>
-                            <a href="#">Privacy Policy</a><br>
-                            <a href="#">Terms And Conditions</a><br>
-                            <a href="#">Frequently Asked Questions (FAQs)</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
+                
+                <div class="col-sm-6 col-lg-3" align="center">
                     <p class="lead">Follow Us On:</p>
                     <div class="col-12 social">
                         <a href="#"><span class="fab fa-facebook"></span> Facebook</a><br>
@@ -1036,13 +1024,13 @@ else{
                         <a href="#"><span class="fab fa-youtube"></span> YouTube</a><br>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-3">
+                <div class="col-sm-6 col-lg-3" align="center">
                     <p class="lead">Email Us:</p>
                     <div class="textbox">
                         <input type="text" placeholder="Write Your Thoughts">
                     </div>
                     <div class="button">
-                        <a href="mailto:" class="btn btn-primary">Send</a>
+                        <a href="mailto:" class="btn btn-primary" style="background-color: #bf2e2e; border-color: #bf2e2e;">Send</a>
                     </div>
                 </div>
             </div>

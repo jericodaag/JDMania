@@ -388,7 +388,7 @@ $con=connect();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LLC | <?php echo $_SESSION['firstname']."'s"?> Cart</title>
+    <title>JDM | <?php echo $_SESSION['firstname']."'s"?> Cart</title>
     <link rel="shortcut icon" type=image/x-icon href=images/icon.png>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome/css/all.css">
@@ -404,7 +404,7 @@ $con=connect();
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap-notify.min.js"></script>
 </head>
-<body>
+<body style="color:#fff; background-color:#000;">
 
 
     <!-- NAVIGATION -->
@@ -427,18 +427,18 @@ $con=connect();
                                         <li class="nav-item dropdown">
                                             <a href="cars.php" class="nav-link dropbtn">Cars</a>
                                             <div class="dropdown-content">
-                                                <a href="men-top.php">Top</a>
-                                                <a href="men-bottom.php">Bottom</a>
-                                                <a href="men-formal-attire.php">Formal Attire</a>
+                                                <a href="hot-deals.php" >Hot Deals</a>
+                                                <a href="new-arrival.php">New Arrival</a>
+                                                <a href="jdm-classics.php">JDM Classics</a>
                                             </div>
                                         </li>
                                     
                                         <li class="nav-item dropdown">
                                             <a href="merchandise.php" class="nav-link dropbtn">Merchandise</a>
                                             <div class="dropdown-content">
-                                                <a href="women-top.php">Top</a>
-                                                <a href="women-bottom.php">Bottom</a>
-                                                <a href="women-dress.php">Dress</a>
+                                                <a href="best-sellers.php">Best Sellers</a>
+                                                <a href="car-accessories.php">Car Accessories</a>
+                                                <a href="jdm-clothing.php">JDM Clothing</a>
                                             </div>
                                         </li>
                                     
@@ -672,7 +672,7 @@ $con=connect();
                 </thead>
  		<?php while($row = $transaction->fetch_array()){ ?>
                 <tbody class="cart-items-container">
-                    <tr class="cart-item-row">
+                    <tr class="cart-item-row" style="color:#fff;">
                     <label class="check">
 
                         <td scope="row" class="cart-item-name align-middle">
@@ -735,8 +735,8 @@ $con=connect();
  <!-- FOOTER -->
  <footer>
         <div class="container-fluid footer">
-            <div class="row">
-                <div class="col-sm-6 col-lg-3">
+            <div class="row" style="justify-content: space-around;">
+                <div class="col-sm-6 col-lg-3" align="left">
                     <h4 class="display-4 name">Lifestyle Clothing Co.</h4>
                     <p class="lead">
                     As Asia’s Online Fashion Destination, we create endless style possibilities through 
@@ -744,19 +744,8 @@ $con=connect();
                     brands, putting you at the centre of it all. With Lifestyle Clothing Co., You Own Now.
                     </p>
                 </div>
-                <div class="col-sm-6 col-lg-3">
-                    <p class="lead">Help Center:</p>
-                    <div class="row">
-                        <div class="col-12">
-                            <a href="#">Location</a><br>
-                            <a href="#">Contact Us</a><br>
-                            <a href="#">Privacy Policy</a><br>
-                            <a href="#">Terms And Conditions</a><br>
-                            <a href="#">Frequently Asked Questions (FAQs)</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
+                
+                <div class="col-sm-6 col-lg-3" align="center">
                     <p class="lead">Follow Us On:</p>
                     <div class="col-12 social">
                         <a href="#"><span class="fab fa-facebook"></span> Facebook</a><br>
@@ -765,13 +754,13 @@ $con=connect();
                         <a href="#"><span class="fab fa-youtube"></span> YouTube</a><br>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-3">
+                <div class="col-sm-6 col-lg-3" align="center">
                     <p class="lead">Email Us:</p>
                     <div class="textbox">
                         <input type="text" placeholder="Write Your Thoughts">
                     </div>
                     <div class="button">
-                        <a href="mailto:" class="btn btn-primary">Send</a>
+                    <a href="mailto:" class="btn btn-primary" style="background-color: #bf2e2e; border-color: #bf2e2e;">Send</a>
                     </div>
                 </div>
             </div>

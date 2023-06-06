@@ -144,7 +144,7 @@ else{
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.js"></script>
 </head>
-<body>
+<body style="color:#fff; background-color:#000;">
 
 
     <!-- NAVIGATION -->
@@ -159,25 +159,25 @@ else{
                     <?php if (isset($_SESSION['UserLogIn'])){ ?>
                         <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                            <a href="men.php" class="nav-link dropbtn">Men</a>
+                            <a href="cars.php" class="nav-link dropbtn">Cars</a>
                         <div class="dropdown-content">
-                            <a href="men-top.php">Top</a>
-                            <a href="men-bottom.php">Bottom</a>
-                            <a href="men-formal-attire.php">Formal Attire</a>
+                            <a href="hot-deals.php">Hot Deals</a>
+                            <a href="new-arrival.php">New Arrival</a>
+                            <a href="jdm-classics.php">Classic Cars</a>
                         </div>
                     </li>
                 
                     <li class="nav-item dropdown">
                         <a href="merchandise.php" class="nav-link dropbtn active-women" id=women>Merchandise</a>
                         <div class="dropdown-content">
-                            <a href="best-sellers.php" class="active-women-dropdown">Best Sellers</a>
-                            <a href="women-bottom.php">Bottom</a>
-                            <a href="women-dress.php">Dress</a>
+                            <a href="best-sellers.php">Best Sellers</a>
+                            <a href="car-accessories.php">Accessories</a>
+                            <a href="jdm-clothing.php">Jdm Clothing</a>
                         </div>
                     </li>
             
                     <li class="nav-item dropdown">
-                        <a href="kids.php" class="nav-link dropbtn">Kids</a>
+                        <a href="about.php" class="nav-link dropbtn">About</a>
                         <div class="dropdown-content">
                             <a href="kids-boys.php">Boys</a>
                             <a href="kids-girls.php">Girls</a>
@@ -188,25 +188,25 @@ else{
                     <?php } else{ ?>
                         <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                            <a href="men.php" class="nav-link dropbtn">Men</a>
+                            <a href="cars.php" class="nav-link dropbtn">Cars</a>
                         <div class="dropdown-content">
-                            <a href="men-top.php">Top</a>
-                            <a href="men-bottom.php">Bottom</a>
-                            <a href="men-formal-attire.php">Formal Attire</a>
+                            <a href="hot-deals.php">Hot Deals</a>
+                            <a href="new-arrival.php">New Arrival</a>
+                            <a href="jdm-classics.php">Classic Cars</a>
                         </div>
                     </li>
                 
                     <li class="nav-item dropdown">
                         <a href="merchandise.php" class="nav-link dropbtn active-women" id=women>Merchandise</a>
                         <div class="dropdown-content">
-                            <a href="best-sellers.php" class="active-women-dropdown">Best Sellers</a>
-                            <a href="women-bottom.php">Bottom</a>
-                            <a href="women-dress.php">Dress</a>
+                            <a href="best-sellers.php">Best Sellers</a>
+                            <a href="car-accessories.php">Accessories</a>
+                            <a href="jdm-clothing.php">Jdm Clothing</a>
                         </div>
                     </li>
             
                     <li class="nav-item dropdown">
-                        <a href="kids.php" class="nav-link dropbtn">Kids</a>
+                        <a href="about.php" class="nav-link dropbtn">About</a>
                         <div class="dropdown-content">
                             <a href="kids-boys.php">Boys</a>
                             <a href="kids-girls.php">Girls</a>
@@ -270,7 +270,7 @@ else{
 
     
     <!-- BANNER BEST SELLERS -->
-        <div class="inline" style="color:white;">
+        <div class="container" style="color:white;">
             <div class="col-12 women banner-image-container">
                 <h4 class="display-4">Best Sellers</h4>
                 <form action=home.php method=get>
@@ -319,12 +319,11 @@ else{
 
 
 
-
     <!-- FOOTER -->
  <footer>
         <div class="container-fluid footer">
-            <div class="row">
-                <div class="col-sm-6 col-lg-3">
+            <div class="row" style="justify-content: space-around;">
+                <div class="col-sm-6 col-lg-3" align="left">
                     <h4 class="display-4 name">Lifestyle Clothing Co.</h4>
                     <p class="lead">
                         As Asia’s Online Fashion Destination, we create endless style possibilities through 
@@ -332,19 +331,8 @@ else{
                     brands, putting you at the centre of it all. With Lifestyle Clothing Co., You Own Now.
                     </p>
                 </div>
-                <div class="col-sm-6 col-lg-3">
-                    <p class="lead">Help Center:</p>
-                    <div class="row">
-                        <div class="col-12">
-                            <a href="#">Location</a><br>
-                            <a href="#">Contact Us</a><br>
-                            <a href="#">Privacy Policy</a><br>
-                            <a href="#">Terms And Conditions</a><br>
-                            <a href="#">Frequently Asked Questions (FAQs)</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3">
+
+                <div class="col-sm-6 col-lg-3" align="center">
                     <p class="lead">Follow Us On:</p>
                     <div class="col-12 social">
                         <a href="#"><span class="fab fa-facebook"></span> Facebook</a><br>
@@ -353,13 +341,13 @@ else{
                         <a href="#"><span class="fab fa-youtube"></span> YouTube</a><br>
                     </div>
                 </div>
-                <div class="col-sm-6 col-lg-3">
+                <div class="col-sm-6 col-lg-3" align="center">
                     <p class="lead">Email Us:</p>
                     <div class="textbox">
                         <input type="text" placeholder="Write Your Thoughts">
                     </div>
                     <div class="button">
-                        <a href="mailto:" class="btn btn-primary">Send</a>
+                    <a href="mailto:" class="btn btn-primary" style="background-color: #bf2e2e; border-color: #bf2e2e;">Send</a>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,17 @@
 /* NAVIGATION */
+@font-face {
+    font-family:"Osaka-Sans Serif";
+    src: url('../fontawesome/webfonts/osaka-re.ttf') format('truetype');
+}
+
+@font-face {
+    font-family:"YOZAKURA";
+    src: url('../fontawesome/webfonts/YOZAKURA-Regular.otf') format('opentype');
+}
+
 body{
     background-color: black;
+    overflow-x: hidden;
 }
 nav {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
@@ -29,7 +40,7 @@ nav {
 }
 
 .navbar-brand:hover, .nav-link:hover {
-    color: rgb(126, 126, 126);
+    color: #ff4747;
 }
 
 
@@ -169,33 +180,30 @@ input#number{
     padding-left: 20px;
 }
 .logo {
-    height: 35px;
+    height: 55px;
     width: auto;
     position: relative;
 }
 
 .active-men {
-    color: dodgerblue;
+    color: #bf2e2e;
 }
 
-.active-men-dropdown {
-    background-color: dodgerblue;
-}
 
 .active-women {
-    color: pink;
+    color: #bf2e2e;
 }
 
 .active-women-dropdown {
-    background-color: pink;
+    background-color: #bf2e2e;
 }
 
 .active-kids {
-    color: limegreen;
+    color: #bf2e2e;
 }
 
 .active-kids-dropdown {
-    background-color: limegreen;
+    background-color: #bf2e2e;
 }
 
 /* DROPDOWN */
@@ -237,7 +245,7 @@ input#number{
 }
 
 .dropdown-content a:hover {
-    background-color: rgb(0, 0, 0);
+    background-color: #bf2e2e;
     color: white;
 }
 
@@ -273,7 +281,8 @@ input#number{
 }
 
 .carousel-caption .display-4 {
-    text-shadow: 0 0 10px white;
+    font-size:65px;
+    font-family:"Osaka-Sans Serif";
 }
 
 button#select{
@@ -380,12 +389,15 @@ form .btn:hover {
     height: 20px;
     border-bottom: 1px solid black;
     text-align: center;
+    padding-bottom:50px;
 }
 
 .header {
-    font-size: 2.2rem;
+    color:#fff;
+    font-family:"YOZAKURA";
+    font-size: 65px;
     font-weight: 100;
-    background-color: #000000;
+    background-color: #000;
     padding: 0px 20px;
 }
 
@@ -458,20 +470,20 @@ form .btn:hover {
     padding: 10px 70px;
     transform: rotate(-45deg);
     font-weight: 500;
-    color: black;
+    color: #fff;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
 }
 
 .item-image-container .shape.men {
-    background-color: #3cafe1;
+    background-color: #bf2e2e;
 }
 
 .item-image-container .shape.women {
-    background-color: #fc6585;
+    background-color: #bf2e2e;
 }
 
 .item-image-container .shape.kids {
-    background-color: #7cc03a;
+    background-color: #bf2e2e;
 }
 
 .item-container a {
@@ -491,11 +503,6 @@ form .btn:hover {
 
 .fixed-banner {
     width: 100%;
-    background: linear-gradient(rgba(0,0,0, 0.5), rgba(119, 64, 64, 0.5)), url("../images/home/carousel-1.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     color: white;
 }
 
@@ -712,7 +719,7 @@ button#btnminus{
 }
 
 .active-btn{
-    color: orange;
+    color: #bf2e2e;
 }
 
 #profileDis{
@@ -1098,29 +1105,16 @@ font-size: 12px;
     background-size:100%, 200%;
 }
 
-
 .kids.banner-image-container {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #7cc03a 40%, #7cc03a 60%, rgba(0, 0, 0, 0)), url("../images/home/kidsbanner.jpg");
     justify-content: center;
     background-size:100%, 200%;
 }
 
-.kids.banner-image-container h4 {
-    border-bottom: 5px solid #b0ff61;
-    border-top: 5px solid #b0ff61;
-    padding-bottom: 10px;
-    font-size: 50px;
-}
+
 .boys.banner-image-container {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #7cc03a 40%, #7cc03a 60%, rgba(0, 0, 0, 0)), url("../images/home/boysbanner.jpg");
     justify-content: center;
-}
-
-.boys.banner-image-container h4 {
-    border-bottom: 5px solid #b0ff61;
-    border-top: 5px solid #b0ff61;
-    padding-bottom: 10px;
-    font-size: 50px;
 }
 
 .girls.banner-image-container {
@@ -1128,24 +1122,11 @@ font-size: 12px;
     justify-content: center;
 }
 
-.girls.banner-image-container h4 {
-    border-bottom: 5px solid #b0ff61;
-    border-top: 5px solid #b0ff61;
-    padding-bottom: 10px;
-    font-size: 50px;
-}
-
 .toddlers.banner-image-container {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #7cc03a 40%, #7cc03a 60%, rgba(0, 0, 0, 0)), url("../images/home/toddlersbanner.jpg");
     justify-content: center;
 }
 
-.toddlers.banner-image-container h4 {
-    border-bottom: 5px solid #b0ff61;
-    border-top: 5px solid #b0ff61;
-    padding-bottom: 10px;
-    font-size: 50px;
-}
 }
 @media screen and (min-width: 900px){
     .search-boxmen {
@@ -1235,52 +1216,26 @@ font-size: 12px;
         background-size:100%, 120%;
     }
     
-    .kids.banner-image-container h4 {
-        border-bottom: 5px solid #b0ff61;
-        border-top: 5px solid #b0ff61;
-        padding-bottom: 10px;
-        font-size: 70px;
-    }
     
     .boys.banner-image-container {
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #7cc03a 40%, #7cc03a 60%, rgba(0, 0, 0, 0)), url("../images/home/boysbanner.jpg");
         justify-content: center;
         
     }
-    
-    .boys.banner-image-container h4 {
-        border-bottom: 5px solid #b0ff61;
-        border-top: 5px solid #b0ff61;
-        padding-bottom: 10px;
-        font-size: 70px;
-    }
-    
+      
     
     .girls.banner-image-container {
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #7cc03a 40%, #7cc03a 60%, rgba(0, 0, 0, 0)), url("../images/home/girlsbanner.jpg");
         justify-content: center;
     }
     
-    .girls.banner-image-container h4 {
-        border-bottom: 5px solid #b0ff61;
-        border-top: 5px solid #b0ff61;
-        padding-bottom: 10px;
-        font-size: 70px;
-    }
     }
     
     .toddlers.banner-image-container {
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #7cc03a 40%, #7cc03a 60%, rgba(0, 0, 0, 0)), url("../images/home/toddlersbanner.jpg");
         justify-content: center;
     }
-    
-    .toddlers.banner-image-container h4 {
-        border-bottom: 5px solid #b0ff61;
-        border-top: 5px solid #b0ff61;
-        padding-bottom: 10px;
-        font-size: 70px;
-    }
-    
+      
     
     @media screen and (min-width: 1100px){
         .search-boxmen {
@@ -1371,46 +1326,22 @@ font-size: 12px;
             background-size:100%, 100%;
         }
         
-        .kids.banner-image-container h4 {
-            border-bottom: 5px solid #b0ff61;
-            border-top: 5px solid #b0ff61;
-            padding-bottom: 10px;
-            font-size: 80px;
-        }
+
         .boys.banner-image-container {
             background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #7cc03a 40%, #7cc03a 60%, rgba(0, 0, 0, 0)), url("../images/home/boysbanner.jpg");
             justify-content: center;
         }
         
-        .boys.banner-image-container h4 {
-            border-bottom: 5px solid #b0ff61;
-            border-top: 5px solid #b0ff61;
-            padding-bottom: 10px;
-            font-size: 80px;
-        }
         
         .girls.banner-image-container {
             background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #7cc03a 40%, #7cc03a 60%, rgba(0, 0, 0, 0)), url("../images/home/girlsbanner.jpg");
             justify-content: center;
         }
         
-        .girls.banner-image-container h4 {
-            border-bottom: 5px solid #b0ff61;
-            border-top: 5px solid #b0ff61;
-            padding-bottom: 10px;
-            
-        }
         
         .toddlers.banner-image-container {
             background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #7cc03a 40%, #7cc03a 60%, rgba(0, 0, 0, 0)), url("../images/home/toddlersbanner.jpg");
             justify-content: center;
-        }
-        
-        .toddlers.banner-image-container h4 {
-            border-bottom: 5px solid #b0ff61;
-            border-top: 5px solid #b0ff61;
-            padding-bottom: 10px;
-            font-size: 80px;
         }
     }
 
