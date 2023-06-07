@@ -716,7 +716,7 @@ $con=connect();
         <div class="container text-center">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="display-3">Your Cart is Currently Empty!</h1>
+                    <h1 class="display-cart">Your Cart is Currently Empty!</h1>
                     <h5 class="display-5">Go to home to add items here</h1>
                 </div>
             </div> 

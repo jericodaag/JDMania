@@ -1,5 +1,30 @@
 /* NAVIGATION */
 @font-face {
+    font-family:"Chocolates";
+    src: url('../fontawesome/webfonts/Chocolates.otf') format('opentype');
+}
+@font-face {
+    font-family:"Code";
+    src: url('../fontawesome/webfonts/Code.otf') format('opentype');
+}
+@font-face {
+    font-family:"Nexa";
+    src: url('../fontawesome/webfonts/Nexa.ttf') format('truetype');
+}
+@font-face {
+    font-family:"Geomatrix";
+    src: url('../fontawesome/webfonts/Geomatrix.ttf') format('truetype');
+}
+@font-face {
+    font-family:"Couture";
+    src: url('../fontawesome/webfonts/couture.otf') format('opentype');
+}
+@font-face {
+    font-family:"Valorant Font";
+    src: url('../fontawesome/webfonts/Valorant Font.ttf') format('truetype');
+}
+
+@font-face {
     font-family:"Osaka-Sans Serif";
     src: url('../fontawesome/webfonts/osaka-re.ttf') format('truetype');
 }
@@ -8,6 +33,12 @@
     font-family:"YOZAKURA";
     src: url('../fontawesome/webfonts/YOZAKURA-Regular.otf') format('opentype');
 }
+
+@font-face {
+    font-family:"A4speed";
+    src: url('../fontawesome/webfonts/a4speed.ttf') format('truetype');
+}
+
 
 body{
     background-color: black;
@@ -18,9 +49,16 @@ nav {
     background-color: black;
     
 }
+.btn {
+    font-family: "Geomatrix";
+    margin-top: 15px;
+  }
 
 .navbar-brand, .nav-link, .fa-bars {
     color: white;
+    font-family:"Valorant Font";
+    font-size:1.1rem;
+
 }
 
 .ua-image {
@@ -109,7 +147,6 @@ input#number{
 .cart-item-image {
     height: 150px;
     width: auto;
-    border: 1px solid black;
     padding: 5px;
 }
 
@@ -151,7 +188,7 @@ input#number{
 }  */
 
 .login-background {
-    background: linear-gradient(rgba(0,0,0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/background/login-bg.jpg");
+    background: linear-gradient(rgba(0,0,0, 0.4), rgba(0, 0, 0, 0.7)), url("../images/background/login-bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -165,7 +202,7 @@ input#number{
     width: 100%;
 }
 .signup-background {
-    background: linear-gradient(rgba(0,0,0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/background/signup-bg.jpg");
+    background: linear-gradient(rgba(0,0,0, 0.4), rgba(0, 0, 0, 0.7)), url("../images/background/signup-bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -255,20 +292,37 @@ input#number{
 
 /* CAROUSEL */
 .carousel-item {
-    height: 350px;
+    height: 390px;
     width: 100%;
 }
 
 .carousel-item img {
     position: absolute;
-    top: 0;
+    top: -300px;
     left: 0;
     min-height: 100vh;
     width: 100%;
     align-items: center;
     object-fit: cover;
-    filter: brightness(50%);
+    filter: opacity(0.5);
 }
+.carousel-item .video-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-item video {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    filter: opacity(0.5)
+  }
+  
 
 .carousel-caption {
     position: absolute;
@@ -281,9 +335,39 @@ input#number{
 }
 
 .carousel-caption .display-4 {
-    font-size:65px;
-    font-family:"Osaka-Sans Serif";
+    font-size:60px;
+    font-family:"Valorant Font";
 }
+.display-4 {
+    font-family:"A4speed";
+    text-align: center;
+  }
+
+  .display-cart {
+    font-family:"Geomatrix";
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 20px;
+  }
+
+  .display-Sign {
+    font-size:65px;
+    font-family: "Valorant Font";
+    text-align: center;
+    margin-top: -30px;
+
+  }  
+
+  .display-Log {
+    font-size:65px;
+    font-family: "Valorant Font";
+    text-align: center;
+    margin-top: -20px;
+  }  
+p.lead {
+  font-family: "Chocolates";
+}
+
 
 button#select{
     border-radius: 50px;
@@ -375,7 +459,9 @@ button#select{
         font-size: 3.1em;
     }
     .carousel-caption p {
-        font-size: 1.7em;
+        font-size: 1.5em;
+        font-family:"A4speed";
+
     }
 }
 form .btn:hover {
@@ -394,8 +480,8 @@ form .btn:hover {
 
 .header {
     color:#fff;
-    font-family:"YOZAKURA";
-    font-size: 65px;
+    font-family:"Valorant Font";
+    font-size: 45px;
     font-weight: 100;
     background-color: #000;
     padding: 0px 20px;
@@ -428,7 +514,7 @@ form .btn:hover {
     padding: 0 10px 5px 10px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Geomatrix";
     color: white;
     padding: 10px;
 }
@@ -442,6 +528,29 @@ form .btn:hover {
 
 
 /* PRODUCTS */
+.item-description-container h5 {
+    font-family: "A4speed";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.item-description-container p {
+    font-family: "Geomatrix";
+    font-size: 15px;
+    font-weight: normal;
+}
+.product-name {
+    font-family: "Geomatrix";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.item-description-container{
+    font-family: "A4speed";
+    font-size: 20px;
+    font-weight: normal;
+}
+
 .item-container {
     transition: 0.5s ease;
     border-radius: 5px;
@@ -531,6 +640,17 @@ form .btn:hover {
 
 
 /* FOOTER */
+.container,
+.container * {
+  color: #fff;
+}
+
+.footer,
+.footer * {
+  color: #fff;
+}
+
+
 .footer {
     background-color: black;
     color: white;
@@ -606,14 +726,36 @@ form .btn:hover {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
 }
 
+form input[type="email"],
+form input[type="password"] {
+  font-family: "Geomatrix";
+}
 
+form label {
+  font-family: "Geomatrix";
+}
+
+form button {
+  font-family: "Geomatrix";
+}
+
+form label {
+    font-family: "Geomatrix";
+  }
+  
+  form input[type="email"],
+  form input[type="password"],
+  form input[type="text"] {
+    font-family: "Geomatrix";
+  }
 
 
 
 /* TABLE */
 .table-container {
     overflow-y: auto;
-    height: 500px;
+    height: 585px;
+    background-color: #121212;
 }
 
 
@@ -665,17 +807,20 @@ button#delete{
 }
 
 .item-description-name {
-    font-size: 2rem;
+    font-size: 2.8rem;
     font-weight: 400;
+    font-family: "A4speed";
 }
 
 .item-description-ratings {
     font-size: 1.2rem;
     font-weight: 300;
+    font-family: "Chocolates";
 }
 
 .item-description-price {
     font-size: 2rem;
+    font-family: "Nexa";
 }
 
 /* QUANTITY COUNTER */
@@ -887,6 +1032,8 @@ font-size: 12px;
     display: flex;
     padding: 0;
     margin: 0;
+    color: #000;
+    font-family: "Code";
  
     border: 1px solid rgb(92, 92, 92);
   }
@@ -1105,27 +1252,12 @@ font-size: 12px;
     background-size:100%, 200%;
 }
 
-.kids.banner-image-container {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #7cc03a 40%, #7cc03a 60%, rgba(0, 0, 0, 0)), url("../images/home/kidsbanner.jpg");
+.about.banner-image-container {
+    background-image: url("../images/home/about banner.jpg");
     justify-content: center;
     background-size:100%, 200%;
 }
 
-
-.boys.banner-image-container {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #7cc03a 40%, #7cc03a 60%, rgba(0, 0, 0, 0)), url("../images/home/boysbanner.jpg");
-    justify-content: center;
-}
-
-.girls.banner-image-container {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #7cc03a 40%, #7cc03a 60%, rgba(0, 0, 0, 0)), url("../images/home/girlsbanner.jpg");
-    justify-content: center;
-}
-
-.toddlers.banner-image-container {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #7cc03a 40%, #7cc03a 60%, rgba(0, 0, 0, 0)), url("../images/home/toddlersbanner.jpg");
-    justify-content: center;
-}
 
 }
 @media screen and (min-width: 900px){
@@ -1265,7 +1397,7 @@ font-size: 12px;
          
           .search-input {
             width: 100%;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Geomatrix';
             font-size: 16px;
             padding: 15px 45px 15px 15px;
             background-color: #ffffff;
@@ -1277,11 +1409,11 @@ font-size: 12px;
           }
           .search-inputhome {
             width: 100%;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Geomatrix';
             font-size: 16px;
             padding: 15px 45px 15px 15px;
-            background-color: #ffffff;
-            color: #6c6c6c;
+            background-color: #333;
+            color: #fff;
             border-radius: 6px;
             border:none;
             transition: all .4s;
@@ -1359,3 +1491,4 @@ font-size: 12px;
    cursor: pointer;
    text-align: center;
  }
+

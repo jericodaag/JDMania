@@ -43,7 +43,7 @@ $con=connect();
         if(isset($_GET['searchitem'])){ 
             $searchkey=$_GET['searchitem'];
             if($searchkey==""){
-                echo header("Refresh: 0 url=home.php");
+                echo header("Location:home.php");
             }
            
             $sql = "SELECT * FROM tblinventory WHERE `productName` like '%$searchkey%' OR `type` like '%$searchkey%' OR `category` like '%$searchkey%' OR `subcategory` like '%$searchkey%' OR `itemdesc1` like '%$searchkey%' OR `itemdesc2` like '%$searchkey%' OR `itemdesc2` like '%$searchkey%'";
@@ -703,22 +703,59 @@ else{
         </ul>
         <div class="carousel-inner">
        
-            <div class="carousel-item active">
-                <img src="images/home/carban-1.jpg" alt="Wardrobe" class="img-fluid">
-                <div class="carousel-caption">
-                    <h1 class="display-4">JDMania JDM Collections</h1>
-                    <p class="lead">Sports and classic vehicle exporters located in central Japan</p>
-                    <a href="home.php#about"><button type="button" class="btn btn-primary btn-md" style="background-color: #bf2e2e; border-color: #bf2e2e;">Learn More</button></a>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="images/home/carousel-2.jpg" alt="Front Half Store" class="img-fluid">
-                <div class="carousel-caption">
-                    <h1 class="display-4">Take a look at our finest collection</h1>
-                    <p class="lead">Premium products all around the shop</p>
-                    <a href="home.php#about"><button type="button" class="btn btn-primary btn-md" style="background-color: #bf2e2e; border-color: #bf2e2e;">Learn More</button></a>
-                </div>
-            </div>
+        <!-- VIDEO BANNER -->
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="video-wrapper">
+        <video class="img-fluid" autoplay muted loop>
+          <source src="images/home/jdm home 1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="carousel-caption">
+        <h1 class="display-4">JDMania JDM Collections</h1>
+        <p class="lead">Sports and classic vehicle exporters located in central Japan</p>
+        <a href="home.php#about">
+          <button type="button" class="btn btn-primary btn-md" style="background-color: #bf2e2e; border-color: #bf2e2e;">Learn More</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <div class="video-wrapper">
+        <video class="img-fluid" autoplay muted loop>
+          <source src="images/home/jdm home 2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="carousel-caption">
+        <h1 class="display-4">Take a look at our finest collection</h1>
+        <p class="lead">Premium products all around the shop</p>
+        <a href="home.php#about">
+          <button type="button" class="btn btn-primary btn-md" style="background-color: #bf2e2e; border-color: #bf2e2e;">Learn More</button>
+        </a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="video-wrapper">
+        <video class="img-fluid" autoplay muted loop>
+          <source src="images/home/jdm home 3.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="carousel-caption">
+        <h1 class="display-4">Take a look at our finest collection</h1>
+        <p class="lead">Premium products all around the shop</p>
+        <a href="home.php#about">
+          <button type="button" class="btn btn-primary btn-md" style="background-color: #bf2e2e; border-color: #bf2e2e;">Learn More</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
             <div class="carousel-item">
                 <img src="images/home/carousel-3.jpg" alt="Back Half Store" class="img-fluid">
                 <div class="carousel-caption">
@@ -800,7 +837,7 @@ else{
                         
                             </div>
                             
-                            <div class="item-description-container" style="color:white;">
+                             <div class="item-description-container" style="color:white;">
                                     <h5><?php echo $rows['productName']?></h5>
                                     <p><?php echo $rows['itemdesc1']?></p>
                                     <span class="fa fa-star"></span>
@@ -1014,7 +1051,7 @@ else{
                     brands, putting you at the centre of it all. With Lifestyle Clothing Co., You Own Now.
                     </p>
                 </div>
-                
+
                 <div class="col-sm-6 col-lg-3" align="center">
                     <p class="lead">Follow Us On:</p>
                     <div class="col-12 social">

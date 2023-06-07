@@ -23,21 +23,6 @@ $con=connect();
         $users = $con->query($sql) or die ($con->error);
         $row = $users->fetch_assoc();
 
-        //GIRLS
-        $sql = "SELECT * FROM tblinventory where `type`='Tops' AND `category`='Kids' AND `subcategory`='Girls' order by rand() LIMIT 9";
-        $gtops = $con->query($sql) or die ($con->error);
-        $sql = "SELECT * FROM tblinventory where `type`='Bottoms' AND `category`='Kids' AND `subcategory`='Girls' order by rand() LIMIT 9";
-        $gbots = $con->query($sql) or die ($con->error);
-        $sql = "SELECT * FROM tblinventory where `type`='Dress' AND `category`='Kids' AND `subcategory`='Girls' order by rand() LIMIT 9";
-        $gdress = $con->query($sql) or die ($con->error);
-        //BOYS
-        $sql = "SELECT * FROM tblinventory where `type`='Tops' AND `category`='Kids' AND `subcategory`='Boys' order by rand() LIMIT 9";
-        $btops = $con->query($sql) or die ($con->error);
-        $sql = "SELECT * FROM tblinventory where `type`='Bottoms' AND `category`='Kids' AND `subcategory`='Boys' order by rand() LIMIT 9";
-        $bbots = $con->query($sql) or die ($con->error);
-        //Toddlers
-        $sql = "SELECT * FROM tblinventory where `category`='Kids' AND `subcategory`='Toddlers' order by rand() LIMIT 9";
-        $todd = $con->query($sql) or die ($con->error);
 
         $sql=  "SELECT * FROM tbltransaction";
         $transaction = $con->query($sql) or die ($con->error);
@@ -156,7 +141,7 @@ else{
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.js"></script>
 </head>
-<body>
+<body style="background-color:black;">
 
 
     <!-- NAVIGATION -->
@@ -166,36 +151,30 @@ else{
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="fas fa-bars"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                
-                
+            <div class="collapse navbar-collapse" id="navbarResponsive">        
                 <ul class="navbar-nav ml-auto">
                     <?php if (isset($_SESSION['UserLogIn'])){ ?>
                         <ul class="navbar-nav">
                     <li class="nav-item dropdown">
                             <a href="cars.php" class="nav-link dropbtn">Cars</a>
                         <div class="dropdown-content">
-                            <a href="men-top.php">Top</a>
-                            <a href="men-bottom.php">Bottom</a>
-                            <a href="men-formal-attire.php">Formal Attire</a>
+                            <a href="hot-deals.php">Hot Deals</a>
+                            <a href="new-arrival.php">New Arrival</a>
+                            <a href="jdm-classics.php">Classic Cars</a>
                         </div>
                     </li>
                 
                     <li class="nav-item dropdown">
                         <a href="merchandise.php" class="nav-link dropbtn" id=women>Merchandise</a>
                         <div class="dropdown-content">
-                            <a href="women-top.php">Top</a>
-                            <a href="women-bottom.php">Bottom</a>
-                            <a href="women-dress.php">Dress</a>
+                            <a href="best-sellers.php">Best Sellers</a>
+                            <a href="car-accessories.php">Accessories</a>
+                            <a href="jdm-clothing.php">Jdm Clothing</a>
                         </div>
                     </li>
                 
-                    <li class="nav-item dropdown">
-                        <a href="about.php" class="nav-link dropbtn active-kids">About</a>
+                        <a href="about.php" class="nav-link dropbtn">About</a>
                         <div class="dropdown-content">
-                            <a href="kids-boys.php">Boys</a>
-                            <a href="kids-girls.php">Girls</a>
-                            <a href="kids-toddlers.php">Toddlers</a>
                         </div>
                     </li>
                 </ul>
@@ -204,33 +183,28 @@ else{
                     <li class="nav-item dropdown">
                             <a href="cars.php" class="nav-link dropbtn">Cars</a>
                         <div class="dropdown-content">
-                            <a href="men-top.php">Top</a>
-                            <a href="men-bottom.php">Bottom</a>
-                            <a href="men-formal-attire.php">Formal Attire</a>
+                            <a href="hot-deals.php">Hot Deals</a>
+                            <a href="new-arrival.php">New Arrival</a>
+                            <a href="jdm-classics.php">Classic Cars</a>
                         </div>
                     </li>
                 
                     <li class="nav-item dropdown">
-                        <a href="merchandise.php" class="nav-link dropbtn" id=women>Merchandise</a>
+                        <a href="merchandise.php" class="nav-link dropbtn">Merchandise</a>
                         <div class="dropdown-content">
-                            <a href="women-top.php">Top</a>
-                            <a href="women-bottom.php">Bottom</a>
-                            <a href="women-dress.php">Dress</a>
+                            <a href="best-sellers.php">Best Sellers</a>
+                            <a href="car-accessories.php">Accessories</a>
+                            <a href="jdm-clothing.php">Jdm Clothing</a>
                         </div>
                     </li>
                 
-                    <li class="nav-item dropdown">
-                        <a href="about.php" class="nav-link dropbtn active-kids">About</a>
+                        <a href="about.php" class="nav-link dropbtn">About</a>
                         <div class="dropdown-content">
-                            <a href="kids-boys.php">Boys</a>
-                            <a href="kids-girls.php">Girls</a>
-                            <a href="kids-toddlers.php">Toddlers</a>
                         </div>
                     </li>
                 </ul>
                     <?php }?>
-
-                    
+                   
                     <?php if($signup==true){?>
                     <li class="nav-item" id="account">
                     <div class="navbar-collapse" id="navbar-list-4">
@@ -260,8 +234,6 @@ else{
                         <a href="sign-up.php"  class="nav-link">Sign Up</a>
                     </li>
                     <?php }?>
-
-
                     <?php if (isset($_SESSION['UserLogIn'])){ ?>
                         <?php if($count!='0'){?>
                             <style>.cart-button:before {content: "<?php echo $count ?>"}</style>
@@ -284,11 +256,10 @@ else{
 
 
 
-    <!-- BANNER KIDS -->
-    <div class="container">
-        <div class="row">
-            <div class="col-12 kids banner-image-container">
-                <h4 class="display-4">About</h4>
+    <!-- BANNER ABOUT -->
+    <div class="inline">
+            <div class="col-12 about banner-image-container" style="color:white;">
+                <h4 class="display-4">Car Categories</h4>
                 <form action=home.php method=get>
                 <div class="search-boxkids">
                     <input class="search-input" name=searchitem  value="" type="text" placeholder="Search something..">
@@ -309,331 +280,41 @@ else{
     </div>
     <br><br><br>
 
-
-
-
-
-    <!-- PRODUCT CAROUSEL -->
-    <div class="container">
-        <div class="header-container">
-            <span class="header">Boy's Tops</span>
-            </div>
-        <br><br><br>
-       
-        <div class="row text-center">
-        
+    <!-- About page content?-->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Head content here -->
+</head>
+<body>
+    <!-- Navigation content here -->
+    <!-- Banner content here -->
+    <!-- Main content here -->
+    <div class="container-about">
+        <div class="row">
             <div class="col-12">
-                <div class="owl-carousel owl-theme">
-                    
-                <?php while($row = $btops->fetch_array()){ ?>
-                    <div class="item">
-                        <div class="item-container">
-                        <div class="item-image-container">
-                        <a href="home.php?select=<?php echo $row['productID']?>"><button type=submit name=select id=select><img src="<?php echo "images/products/".$row['photo']?>" alt=""></button></a>
-                            <?php if($row['category']=="Cars"){?>
-                                    <div class="shape men"><?php echo "₱".$row['price']?></div>
-                                <?php } else if($row['category']=="Merchandise"){?>
-                                    <div class="shape women"><?php echo "₱".$row['price']?></div>
-                                <?php } else if($row['category']=="About"){?>
-                                    <div class="shape kids"><?php echo "₱".$row['price']?></div>
-                                <?php }?>
-                    
-                        </div>
-                        
-                             <div class="item-description-container">
-                                <h5><?php echo $row['productName']?></h5>
-                                <p><?php echo $row['itemdesc1']?></p>
-                        </div>
-                        </div>
-                       
-                           
-                    </div>
-                    <?php } ?>
-                    </div>
-                    <div class="row text-center">
-                        <div class="col-12">
-                        <a href="kids-boys.php#boys-tops"><button class="btn btn-primary btn-md">See More</button></a>
-                        </div>
-                     </div>
-                </div>
-                
+                <h2>Welcome to JDMania!</h2>
+                <p class="description">Unleash Your Passion for JDM Cars</p>
+                <p class="highlight">Experience the Thrill of Japanese Automotive Excellence</p>
+                <p class="about">At JDMania, we live and breathe JDM (Japanese Domestic Market) cars. We are more than just a dealership; we are a gateway to a world where performance, style, and heritage intertwine to create automotive masterpieces.</p>
+                <p class="mission">Our Mission:</p>
+                <p class="mission-statement">To provide car enthusiasts with access to the finest selection of JDM vehicles, meticulously curated to ignite your automotive dreams and empower your driving experience.</p>
+                <p class="why-choose">Why Choose JDMania:</p>
+                <ul class="why-choose-list">
+                    <li class="why-choose-item">Authentic JDM Vehicles: We handpick each car, ensuring it embodies the essence of the JDM culture and represents the pinnacle of Japanese automotive engineering.</li>
+                    <li class="why-choose-item">Quality and Transparency: Our team of experts meticulously inspects and verifies the authenticity and performance of every vehicle, providing you with peace of mind and confidence in your purchase.</li>
+                    <li class="why-choose-item">Passionate Expertise: Our knowledgeable staff are true car enthusiasts, ready to share their expertise, offer valuable insights, and guide you towards your perfect JDM car.</li>
+                    <li class="why-choose-item">Exceptional Buying Experience: From browsing our extensive inventory to personalized test drives and seamless transactions, we prioritize your satisfaction and strive to exceed your expectations.</li>
+                    <li class="why-choose-item">Join the JDM Community: By choosing JDMania, you become part of a vibrant community of passionate JDM enthusiasts, where your love for cars can flourish and connections can be forged.</li>
+                </ul>
+                <p class="start-journey">Start Your JDM Adventure Today!</p>
+                <p class="explore-inventory">Explore our diverse inventory of JDM vehicles, immerse yourself in the legacy of automotive greatness, and embark on an unforgettable journey behind the wheel of your dream car.</p>
             </div>
-                </div>
-    
-    <br><br><br>
-
-
-
-
-
-    <!-- PRODUCT CAROUSEL -->
-    <div class="container">
-        <div class="header-container">
-            <span class="header">Boy's Bottoms</span>
-            </div>
-        <br><br><br>
-       
-        <div class="row text-center">
-        
-            <div class="col-12">
-                <div class="owl-carousel owl-theme">
-                    
-                <?php while($row = $bbots->fetch_array()){ ?>
-                    <div class="item">
-                        <div class="item-container">
-                            <div class="item-image-container">
-                                <a href="home.php?select=<?php echo $row['productID']?>"><button type=submit name=select id=select><img src="<?php echo "images/products/".$row['photo']?>" alt=""></button></a>
-                                    <?php if($row['category']=="Cars"){?>
-                                            <div class="shape men"><?php echo "₱".$row['price']?></div>
-                                        <?php } else if($row['category']=="Merchandise"){?>
-                                            <div class="shape women"><?php echo "₱".$row['price']?></div>
-                                        <?php } else if($row['category']=="About"){?>
-                                            <div class="shape kids"><?php echo "₱".$row['price']?></div>
-                                        <?php }?>
-                            
-                            </div>
-                        
-                             <div class="item-description-container">
-                                <h5><?php echo $row['productName']?></h5>
-                                <p><?php echo $row['itemdesc1']?></p>
-                            </div>
-                            
-                        </div> 
-                    </div>
-                <?php } ?>
-                </div>
-                    <div class="row text-center">
-                        <div class="col-12">
-                        <a href="kids-boys.php#boys-bottoms"><button class="btn btn-primary btn-md">See More</button></a>
-                        </div>
-                     </div>
-            </div>
-                
-            </div>
-            
-                </div>
-    
-    <br><br><br>
-
-
-
-
-
-    
-
-    <!-- PRODUCT CAROUSEL -->
-    <div class="container">
-        <div class="header-container">
-            <span class="header">Girl's Tops</span>
         </div>
-        <br><br><br>
-        
-        <div class="row text-center">
-        
-            <div class="col-12">
-                <div class="owl-carousel owl-theme">
-                    
-                <?php while($row = $gtops->fetch_array()){ ?>
-                    <div class="item">
-                        <div class="item-container">
-                            <div class="item-image-container">
-                                <a href="home.php?select=<?php echo $row['productID']?>"><button type=submit name=select id=select><img src="<?php echo "images/products/".$row['photo']?>" alt=""></button></a>
-                                    <?php if($row['category']=="Cars"){?>
-                                            <div class="shape men"><?php echo "₱".$row['price']?></div>
-                                        <?php } else if($row['category']=="Merchandise"){?>
-                                            <div class="shape women"><?php echo "₱".$row['price']?></div>
-                                        <?php } else if($row['category']=="About"){?>
-                                            <div class="shape kids"><?php echo "₱".$row['price']?></div>
-                                        <?php }?>
-                            
-                            </div>
-                        
-                             <div class="item-description-container">
-                                <h5><?php echo $row['productName']?></h5>
-                                <p><?php echo $row['itemdesc1']?></p>
-                            </div>
-                            
-                        </div> 
-                    </div>
-                <?php } ?>
-                </div>
-                    <div class="row text-center">
-                        <div class="col-12">
-                        <a href="kids-girls.php#girls-tops"><button class="btn btn-primary btn-md">See More</button></a>
-                        </div>
-                     </div>
-            </div>
-                
-            </div>
-            
-                </div>
-    
-    <br><br><br>
-
-
-
-
-
-
-    <!-- PRODUCT CAROUSEL -->
-    <div class="container">
-        <div class="header-container">
-            <span class="header">Girl's Bottoms</span>
-        </div>
-        <br><br><br>
-        
-        <div class="row text-center">
-        
-            <div class="col-12">
-                <div class="owl-carousel owl-theme">
-                    
-                <?php while($row = $gbots->fetch_array()){ ?>
-                    <div class="item">
-                        <div class="item-container">
-                            <div class="item-image-container">
-                                <a href="home.php?select=<?php echo $row['productID']?>"><button type=submit name=select id=select><img src="<?php echo "images/products/".$row['photo']?>" alt=""></button></a>
-                                    <?php if($row['category']=="Cars"){?>
-                                            <div class="shape men"><?php echo "₱".$row['price']?></div>
-                                        <?php } else if($row['category']=="Merchandise"){?>
-                                            <div class="shape women"><?php echo "₱".$row['price']?></div>
-                                        <?php } else if($row['category']=="About"){?>
-                                            <div class="shape kids"><?php echo "₱".$row['price']?></div>
-                                        <?php }?>
-                            
-                            </div>
-                        
-                             <div class="item-description-container">
-                                <h5><?php echo $row['productName']?></h5>
-                                <p><?php echo $row['itemdesc1']?></p>
-                            </div>
-                            
-                        </div> 
-                    </div>
-                <?php } ?>
-                </div>
-                    <div class="row text-center">
-                        <div class="col-12">
-                        <a href="kids-girls.php#girls-bottoms"><button class="btn btn-primary btn-md">See More</button></a>
-                        </div>
-                     </div>
-            </div>
-                
-            </div>
-            
-                </div>
-    
-    <br><br><br>
-
-
-
-
-
-
-
-    <!-- PRODUCT CAROUSEL -->
-    <div class="container">
-        <div class="header-container">
-            <span class="header">Girl's Dress</span>
-        </div>
-        <br><br><br>
-        
-        <div class="row text-center">
-        
-            <div class="col-12">
-                <div class="owl-carousel owl-theme">
-                    
-                <?php while($row = $gdress->fetch_array()){ ?>
-                    <div class="item">
-                        <div class="item-container">
-                            <div class="item-image-container">
-                                <a href="home.php?select=<?php echo $row['productID']?>"><button type=submit name=select id=select><img src="<?php echo "images/products/".$row['photo']?>" alt=""></button></a>
-                                    <?php if($row['category']=="Cars"){?>
-                                            <div class="shape men"><?php echo "₱".$row['price']?></div>
-                                        <?php } else if($row['category']=="Merchandise"){?>
-                                            <div class="shape women"><?php echo "₱".$row['price']?></div>
-                                        <?php } else if($row['category']=="About"){?>
-                                            <div class="shape kids"><?php echo "₱".$row['price']?></div>
-                                        <?php }?>
-                            
-                            </div>
-                        
-                             <div class="item-description-container">
-                                <h5><?php echo $row['productName']?></h5>
-                                <p><?php echo $row['itemdesc1']?></p>
-                            </div>
-                            
-                        </div> 
-                    </div>
-                <?php } ?>
-                </div>
-                    <div class="row text-center">
-                        <div class="col-12">
-                        <a href="kids-girls.php#girls-dress"><button class="btn btn-primary btn-md">See More</button></a>
-                        </div>
-                     </div>
-            </div>
-                
-            </div>
-            
-                </div>
-    
-    <br><br><br>
-
-
-
-
-
-
-
-    <!-- PRODUCT CAROUSEL -->
-    <div class="container">
-        <div class="header-container">
-            <span class="header">Toddlers</span>
-        </div>
-        <br><br><br>
-        
-        <div class="row text-center">
-        
-            <div class="col-12">
-                <div class="owl-carousel owl-theme">
-                    
-                <?php while($row = $todd->fetch_array()){ ?>
-                    <div class="item">
-                        <div class="item-container">
-                            <div class="item-image-container">
-                                <a href="home.php?select=<?php echo $row['productID']?>"><button type=submit name=select id=select><img src="<?php echo "images/products/".$row['photo']?>" alt=""></button></a>
-                                    <?php if($row['category']=="Cars"){?>
-                                            <div class="shape men"><?php echo "₱".$row['price']?></div>
-                                        <?php } else if($row['category']=="Merchandise"){?>
-                                            <div class="shape women"><?php echo "₱".$row['price']?></div>
-                                        <?php } else if($row['category']=="About"){?>
-                                            <div class="shape kids"><?php echo "₱".$row['price']?></div>
-                                        <?php }?>
-                            
-                            </div>
-                        
-                             <div class="item-description-container">
-                                <h5><?php echo $row['productName']?></h5>
-                                <p><?php echo $row['itemdesc1']?></p>
-                            </div>
-                            
-                        </div> 
-                    </div>
-                <?php } ?>
-                </div>
-                    <div class="row text-center">
-                        <div class="col-12">
-                        <a href="kids-toddlers.php"><button class="btn btn-primary btn-md" style="border-color:#bf2e2e; background-color:#bf2e2e;">See More</button></a>
-                        </div>
-                     </div>
-            </div>
-                
-            </div>
-            
-                </div>
-    
-    <br><br><br>
-
+    </div>
+    <!-- Footer content here -->
+</body>
+</html>
 
 
 

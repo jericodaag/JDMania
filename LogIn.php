@@ -126,7 +126,7 @@ if(isset($_POST['register'])){
                 <ul class="navbar-nav ml-auto">
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                    <a href="men.php" class="nav-link dropbtn active-men">Cars</a>
+                    <a href="cars.php" class="nav-link dropbtn active-men">Cars</a>
                         <div class="dropdown-content">
                             <a href="hot-deals.php">Hot Deals</a>
                             <a href="new-arrival.php">New Arrival</a>
@@ -183,7 +183,7 @@ if(isset($_POST['register'])){
             <div class="row">
                 <div class="col-3"></div>
                 <div class="col-sm-12 col-lg-6 login-container">
-                    <h4 class="display-4">Log In</h4>
+                    <h4 class="display-Log">Log In</h4>
                     <br>
                     <form name="loginform" action="" method=post>
                         <div class="form-group col-12">

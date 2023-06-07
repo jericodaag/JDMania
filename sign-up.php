@@ -292,7 +292,7 @@ if(!isset($_SESSION)){
     <div class="container">
         <div class="row text-center">
             <div class="col-12">
-                <h4 class="display-4">Sign Up</h4>
+                <h4 class="display-Sign">Sign Up</h4>
             </div>
         </div>
         <br><br>

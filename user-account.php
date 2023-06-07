@@ -311,7 +311,7 @@ if(isset($_SESSION['UserLogIn'])&&($_SESSION['Access']=="User")){
 
 
     <!-- USER ACCOUNT -->
-    <div class="container ua-container">
+    <div class="container ua-container" style="color:white;">
         <div class="row">
             <div class="col-10 ua-image">
                 <form action="" method="post" enctype="multipart/form-data">
@@ -344,13 +344,13 @@ if(isset($_SESSION['UserLogIn'])&&($_SESSION['Access']=="User")){
         <?php if($tran->fetch_array()>0){?>
             <div class="row text-center">
             <div class="col-12">
-                <h4 class="display-3">My Orders</h4>
+                <h4 class="display-user-acc">My Orders</h4>
             </div>
         </div> 
    
     <div class="container text-center">
         <br><br>   
-        <div class="row table-responsive table-container">
+        <div class="row table-responsive table-container" style="color:white;">
             <table class="table table-hover">
                 <thead class="thead-dark">
                     <tr>
@@ -386,7 +386,7 @@ if(isset($_SESSION['UserLogIn'])&&($_SESSION['Access']=="User")){
     <br><br><br><br><br><br><br><br><br><br>
     
     <?php } else{?>
-        <div class="container text-center">
+        <div class="container text-center" style="color:white;">
             <div class="row">
                 <div class="col-12">
                     <h1 class="display-3">No Purchase Found!</h1>
