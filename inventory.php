@@ -733,32 +733,6 @@ else{
 
 
                         <div class="form-group col-sm-12 col-md-3">
-                            <label for="category">Category:</label>
-                            <select name="category" id="category" onClick="selectkids()" class="form-control">
-                            <?php if(isset($_GET['edit'])){?>
-                                <option value="<?php echo $category;?>"><?php echo $category;?></option>
-                            <?php }?>
-                                <option value="" name='None'>None</option>
-                                <option value="Men" name='Men'>Men</option>
-                                <option value="Women" name='Women'>Women</option>
-                                <option value="Kids" name='Kids'>Kids</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group col-sm-12 col-md-3">
-                            <label for="sub">If Kids:</label>
-                            <select name="sub" id="sub" class="form-control">
-                                <?php if(isset($_GET['edit'])){?>
-                                    <option value="<?php echo $sub;?>"><?php echo $sub;?></option>
-                                <?php }?>
-                                <option value="" name='None'>None</option>
-                                <option value="Boys" name='Boys'>Boys</option>
-                                <option value="Girls" name='Girls'>Girls</option>
-                                <option value="Toddlers" name='Toddlers'>Toddlers</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group col-sm-12 col-md-3">
                             <label for="price">Price: </label>
                             <input type="text" name="price" id="price" class="form-control" maxlength="10" placeholder="Price" onkeypress="return onlyNumberKey(event)" value="<?php echo $price;?>">
                         </div>

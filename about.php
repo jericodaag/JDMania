@@ -280,11 +280,42 @@ else{
     </div>
     <br><br><br>
 
-    <!-- About page content?-->
     <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Head content here -->
+    <style>
+        body {
+            font-family: "Geomatrix";
+            text-align: center;
+            color: #fff;
+        }
+        .container-about {
+            margin: 0 auto;
+            max-width: 800px;
+        }
+        h2 {
+            font-family: "Valorant Font";
+            font-size: 50px;
+        }
+        .description {
+            font-family: "Valorant Font";
+            font-size:20px;
+        }
+        .highlight {
+            font-family: "Chocolates";
+            font-style: italic;
+        }
+        .about,
+        .mission,
+        .mission-statement,
+        .why-choose,
+        .why-choose-item,
+        .start-journey,
+        .explore-inventory {
+            font-family: "Courier New", Courier, monospace;
+            font-size:20px;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation content here -->

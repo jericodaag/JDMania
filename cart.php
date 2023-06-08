@@ -129,7 +129,7 @@ $con=connect();
                                 $_SESSION['message'] = "<script>
                                 $(function() {
                                     $.notify({
-                                        message: 'Security Advisory: Lifestyle Clothing Co. Sellers are NOT allowed to ask you to order and transact your payments outside the platform. When using our Cash on Delivery service, payment is given to our official delivery partner upon receipt of item.' 
+                                        message: 'Security Advisory: Please note that all transactions and communications should be conducted exclusively through our secure platform. We strictly prohibit any requests to order or transact payments outside of our system. Protect your safety and ensure a reliable car auto dealing experience by staying within our trusted platform.' 
                                     },{
                                         animate: {
                                             enter: 'animate__animated animate__fadeInDown',
@@ -444,11 +444,6 @@ $con=connect();
                                     
                                         <li class="nav-item dropdown">
                                             <a href="about.php" class="nav-link dropbtn">About</a>
-                                            <div class="dropdown-content">
-                                                <a href="kids-boys.php">Boys</a>
-                                                <a href="kids-girls.php">Girls</a>
-                                                <a href="kids-toddlers.php">Toddlers</a>
-                                            </div>
                                         </li>
                                     </ul>
                                     <li class="nav-item">

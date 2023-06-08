@@ -233,11 +233,6 @@ if(isset($_SESSION['UserLogIn'])&&($_SESSION['Access']=="User")){
                 
                     <li class="nav-item dropdown">
                         <a href="about.php" class="nav-link dropbtn">About</a>
-                        <div class="dropdown-content">
-                            <a href="kids-boys.php">Boys</a>
-                            <a href="kids-girls.php">Girls</a>
-                            <a href="kids-toddlers.php">Toddlers</a>
-                        </div>
                     </li>
                 </ul>
                     <li class="nav-item">

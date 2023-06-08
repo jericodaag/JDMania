@@ -179,11 +179,6 @@ else{
                         
                             <li class="nav-item dropdown">
                                 <a href="about.php" class="nav-link dropbtn">About</a>
-                                <div class="dropdown-content">
-                                    <a href="kids-boys.php">Boys</a>
-                                    <a href="kids-girls.php">Girls</a>
-                                    <a href="kids-toddlers.php">Toddlers</a>
-                                </div>
                             </li>
                         </ul>
                     
@@ -209,11 +204,6 @@ else{
                         
                             <li class="nav-item dropdown">
                                 <a href="about.php" class="nav-link dropbtn">About</a>
-                                <div class="dropdown-content">
-                                    <a href="kids-boys.php">Boys</a>
-                                    <a href="kids-girls.php">Girls</a>
-                                    <a href="kids-toddlers.php">Toddlers</a>
-                                </div>
                             </li>
                         </ul>
                     <?php }?>
@@ -316,11 +306,9 @@ else{
                         <div class="item-image-container">
                         <a href="home.php?select=<?php echo $row['productID']?>"><button type=submit name=select id=select><img src="<?php echo "images/products/".$row['photo']?>" alt=""></button></a>
                             <?php if($row['category']=="Cars"){?>
-                                    <div class="shape men"><?php echo "₱".$row['price']?></div>
-                                <?php } else if($row['category']=="Cars"){?>
-                                    <div class="shape women"><?php echo "₱".$row['price']?></div>
-                                <?php } else if($row['category']=="Kids"){?>
-                                    <div class="shape kids"><?php echo "₱".$row['price']?></div>
+                                    <div class="shape cars"><?php echo "₱".$row['price']?></div>
+                                <?php } else if($row['category']=="Merch"){?>
+                                    <div class="shape merch"><?php echo "₱".$row['price']?></div>
                                 <?php }?>
                     
                         </div>
@@ -369,11 +357,9 @@ else{
                         <div class="item-image-container">
                         <a href="home.php?select=<?php echo $row['productID']?>"><button type=submit name=select id=select><img src="<?php echo "images/products/".$row['photo']?>" alt=""></button></a>
                             <?php if($row['category']=="Cars"){?>
-                                    <div class="shape men"><?php echo "₱".$row['price']?></div>
-                                <?php } else if($row['category']=="Cars"){?>
-                                    <div class="shape women"><?php echo "₱".$row['price']?></div>
-                                <?php } else if($row['category']=="Kids"){?>
-                                    <div class="shape kids"><?php echo "₱".$row['price']?></div>
+                                    <div class="shape cars"><?php echo "₱".$row['price']?></div>
+                                <?php } else if($row['category']=="Merch"){?>
+                                    <div class="shape merch"><?php echo "₱".$row['price']?></div>
                                 <?php }?>
                     
                         </div>
@@ -424,11 +410,9 @@ else{
                         <div class="item-image-container">
                         <a href="home.php?select=<?php echo $row['productID']?>"><button type=submit name=select id=select><img src="<?php echo "images/products/".$row['photo']?>" alt=""></button></a>
                             <?php if($row['category']=="Cars"){?>
-                                    <div class="shape men"><?php echo "₱".$row['price']?></div>
-                                <?php } else if($row['category']=="Cars"){?>
-                                    <div class="shape women"><?php echo "₱".$row['price']?></div>
-                                <?php } else if($row['category']=="Kids"){?>
-                                    <div class="shape kids"><?php echo "₱".$row['price']?></div>
+                                    <div class="shape cars"><?php echo "₱".$row['price']?></div>
+                                <?php } else if($row['category']=="Merch"){?>
+                                    <div class="shape merch"><?php echo "₱".$row['price']?></div>
                                 <?php }?>
                     
                         </div>

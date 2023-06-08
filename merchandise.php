@@ -23,11 +23,11 @@ $con=connect();
         $users = $con->query($sql) or die ($con->error);
         $row = $users->fetch_assoc();
 
-        $sql = "SELECT * FROM tblinventory where `type`='Tops' AND `category`='Women' order by rand() LIMIT 9";
+        $sql = "SELECT * FROM tblinventory where `type`='Best' AND `category`='Merch' order by rand() LIMIT 9";
         $data1 = $con->query($sql) or die ($con->error);
-        $sql = "SELECT * FROM tblinventory where `type`='Bottoms' AND `category`='Women' order by rand() LIMIT 9";
+        $sql = "SELECT * FROM tblinventory where `type`='Accessories' AND `category`='Merch' order by rand() LIMIT 9";
         $data2 = $con->query($sql) or die ($con->error);
-        $sql = "SELECT * FROM tblinventory where `type`='Dress' AND `category`='Women' order by rand() LIMIT 9";
+        $sql = "SELECT * FROM tblinventory where `type`='Clothes' AND `category`='Merch' order by rand() LIMIT 9";
         $data3 = $con->query($sql) or die ($con->error);
 
         $sql=  "SELECT * FROM tbltransaction";
@@ -181,11 +181,6 @@ else{
                         
                             <li class="nav-item dropdown">
                                 <a href="about.php" class="nav-link dropbtn">About</a>
-                                <div class="dropdown-content">
-                                    <a href="kids-boys.php">Boys</a>
-                                    <a href="kids-girls.php">Girls</a>
-                                    <a href="kids-toddlers.php">Toddlers</a>
-                                </div>
                             </li>
                         </ul>
                     <?php } else{ ?>
@@ -210,11 +205,6 @@ else{
                         
                             <li class="nav-item dropdown">
                                 <a href="about.php" class="nav-link dropbtn">About</a>
-                                <div class="dropdown-content">
-                                    <a href="kids-boys.php">Boys</a>
-                                    <a href="kids-girls.php">Girls</a>
-                                    <a href="kids-toddlers.php">Toddlers</a>
-                                </div>
                             </li>
                         </ul>
                     <?php }?>
@@ -319,12 +309,10 @@ else{
                         <div class="item-container">
                         <div class="item-image-container">
                         <a href="home.php?select=<?php echo $row['productID']?>"><button type=submit name=select id=select><img src="<?php echo "images/products/".$row['photo']?>" alt=""></button></a>
-                            <?php if($row['category']=="Cars"){?>
-                                    <div class="shape men"><?php echo "₱".$row['price']?></div>
-                                <?php } else if($row['category']=="Merchandise"){?>
-                                    <div class="shape women"><?php echo "₱".$row['price']?></div>
-                                <?php } else if($row['category']=="About"){?>
-                                    <div class="shape kids"><?php echo "₱".$row['price']?></div>
+                            <?php if($row['category']=="Merch"){?>
+                                    <div class="shape merch"><?php echo "₱".$row['price']?></div>
+                                <?php } else if($row['category']=="Cars"){?>
+                                    <div class="shape cars"><?php echo "₱".$row['price']?></div>
                                 <?php }?>
                     
                         </div>
@@ -373,12 +361,10 @@ else{
                         <div class="item-container">
                         <div class="item-image-container">
                         <a href="home.php?select=<?php echo $row['productID']?>"><button type=submit name=select id=select><img src="<?php echo "images/products/".$row['photo']?>" alt=""></button></a>
-                            <?php if($row['category']=="Men"){?>
-                                    <div class="shape men"><?php echo "₱".$row['price']?></div>
-                                <?php } else if($row['category']=="Merchandise"){?>
-                                    <div class="shape women"><?php echo "₱".$row['price']?></div>
-                                <?php } else if($row['category']=="About"){?>
-                                    <div class="shape kids"><?php echo "₱".$row['price']?></div>
+                            <?php if($row['category']=="Merch"){?>
+                                    <div class="shape merch"><?php echo "₱".$row['price']?></div>
+                                <?php } else if($row['category']=="Cars"){?>
+                                    <div class="shape cars"><?php echo "₱".$row['price']?></div>
                                 <?php }?>
                     
                         </div>
@@ -426,12 +412,10 @@ else{
                         <div class="item-container">
                         <div class="item-image-container">
                         <a href="home.php?select=<?php echo $row['productID']?>"><button type=submit name=select id=select><img src="<?php echo "images/products/".$row['photo']?>" alt=""></button></a>
-                            <?php if($row['category']=="Cars"){?>
-                                    <div class="shape men"><?php echo "₱".$row['price']?></div>
-                                <?php } else if($row['category']=="Merchandise"){?>
-                                    <div class="shape women"><?php echo "₱".$row['price']?></div>
-                                <?php } else if($row['category']=="About"){?>
-                                    <div class="shape kids"><?php echo "₱".$row['price']?></div>
+                            <?php if($row['category']=="Merch"){?>
+                                    <div class="shape merch"><?php echo "₱".$row['price']?></div>
+                                <?php } else if($row['category']=="Cars"){?>
+                                    <div class="shape cars"><?php echo "₱".$row['price']?></div>
                                 <?php }?>
                     
                         </div>

@@ -243,7 +243,7 @@ if(isset($_SESSION['UserLogIn'])&&($_SESSION['Access']=="User")){
                 $_SESSION['message'] = "<script>
                                 $(function() {
                                     $.notify({
-                                        message: 'Security Advisory: Lifestyle Clothing Co. Sellers are NOT allowed to ask you to order and transact your payments outside the platform. When using our Cash on Delivery service, payment is given to our official delivery partner upon receipt of item.' 
+                                        message: 'Security Advisory: Protect Yourself! Avoid engaging in car auto dealings outside of our official platform to ensure your safety and security. Never share sensitive information or make payments to unauthorized individuals.' 
                                     },{
                                         animate: {
                                             enter: 'animate__animated animate__fadeInDown',
@@ -451,11 +451,6 @@ else{
                 
                     <li class="nav-item dropdown">
                         <a href="about.php" class="nav-link dropbtn">About</a>
-                        <div class="dropdown-content">
-                            <a href="kids-boys.php">Boys</a>
-                            <a href="kids-girls.php">Girls</a>
-                            <a href="kids-toddlers.php">Toddlers</a>
-                        </div>
                     </li>
                 </ul>
                       
@@ -481,11 +476,6 @@ else{
                 
                     <li class="nav-item dropdown">
                         <a href="about.php" class="nav-link dropbtn">About</a>
-                        <div class="dropdown-content">
-                            <a href="kids-boys.php">Boys</a>
-                            <a href="kids-girls.php">Girls</a>
-                            <a href="kids-toddlers.php">Toddlers</a>
-                        </div>
                     </li>
                 </ul>
                     <?php }?>
@@ -731,7 +721,7 @@ else{
       </div>
       <div class="carousel-caption">
         <h1 class="display-4">Take a look at our finest collection</h1>
-        <p class="lead">Premium products all around the shop</p>
+        <p class="lead">Explore the Finest Japanese Imports in Central Japan</p>
         <a href="home.php#about">
           <button type="button" class="btn btn-primary btn-md" style="background-color: #bf2e2e; border-color: #bf2e2e;">Learn More</button>
         </a>
@@ -745,8 +735,8 @@ else{
         </video>
       </div>
       <div class="carousel-caption">
-        <h1 class="display-4">Take a look at our finest collection</h1>
-        <p class="lead">Premium products all around the shop</p>
+        <h1 class="display-4">Unleash the Power. Unleash the Style.</h1>
+        <p class="lead">Experience Unmatched Performance and Style at JDMania</p>
         <a href="home.php#about">
           <button type="button" class="btn btn-primary btn-md" style="background-color: #bf2e2e; border-color: #bf2e2e;">Learn More</button>
         </a>
@@ -912,7 +902,9 @@ else{
                                     <span class="fa fa-star-half-alt"></span>
                                     <span class="far fa-star"></span>
                                     
-                                    <label>&nbsp;(<?php echo $row['quantity']?> Left)</label> 
+                                    <div class="container-label">
+                                        <label>&nbsp;(<?php echo $row['quantity']; ?> Left)</label>
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -955,7 +947,9 @@ else{
                                     <span class="fa fa-star"></span>
                                     <span class="fa fa-star"></span>
                                     <span class="fa fa-star-half-alt"></span>
+                                    <div class="container-label">
                                     <label>&nbsp;(<?php echo $row['quantity']?> Left)</label> 
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -1002,7 +996,9 @@ else{
                                     <span class="far fa-star"></span>
                                     <span class="far fa-star"></span>
                                     
-                                    <label>&nbsp;(<?php echo $row['quantity']?> Left)</label> 
+                                    <div class="container-label">
+                                    <label>&nbsp;(<?php echo $row['quantity']?> Left)</label>
+                                    </div> 
                                 </div>
                             </a>
                         </div>

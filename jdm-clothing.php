@@ -23,7 +23,7 @@ $con=connect();
         $users = $con->query($sql) or die ($con->error);
         $row = $users->fetch_assoc();
 
-        $sql = "SELECT * FROM tblinventory where `type`='Dress' AND `category`='Women'";
+        $sql = "SELECT * FROM tblinventory where `type`='Clothes' AND `category`='Merch'";
         $wdress = $con->query($sql) or die ($con->error);
 
         $sql=  "SELECT * FROM tbltransaction";
@@ -177,11 +177,6 @@ else{
                          
                     <li class="nav-item dropdown">
                         <a href="about.php" class="nav-link dropbtn">About</a>
-                        <div class="dropdown-content">
-                            <a href="kids-boys.php">Boys</a>
-                            <a href="kids-girls.php">Girls</a>
-                            <a href="kids-toddlers.php">Toddlers</a>
-                        </div>
                     </li>
                     </ul>
                     <?php } else{ ?>
@@ -206,11 +201,6 @@ else{
                               
                     <li class="nav-item dropdown">
                         <a href="about.php" class="nav-link dropbtn">About</a>
-                        <div class="dropdown-content">
-                            <a href="kids-boys.php">Boys</a>
-                            <a href="kids-girls.php">Girls</a>
-                            <a href="kids-toddlers.php">Toddlers</a>
-                        </div>
                     </li>
                     </ul>
                     <?php }?>

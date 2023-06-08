@@ -126,7 +126,7 @@ if(isset($_POST['register'])){
                 <ul class="navbar-nav ml-auto">
                 <ul class="navbar-nav">
                     <li class="nav-item dropdown">
-                    <a href="cars.php" class="nav-link dropbtn active-men">Cars</a>
+                    <a href="cars.php" class="nav-link dropbtn">Cars</a>
                         <div class="dropdown-content">
                             <a href="hot-deals.php">Hot Deals</a>
                             <a href="new-arrival.php">New Arrival</a>
@@ -139,17 +139,12 @@ if(isset($_POST['register'])){
                         <div class="dropdown-content">
                             <a href="best-sellers.php">Best Sellers</a>
                             <a href="car-accessories.php">Car Accessories</a>
-                            <a href="jdm-clothing.php">JDM Clothing</a>
+                            <a href="jdm-clothing.php">Jdm Clothing</a>
                         </div>
                     </li>
                 
                     <li class="nav-item dropdown">
                         <a href="about.php" class="nav-link dropbtn">About</a>
-                        <div class="dropdown-content">
-                            <a href="kids-boys.php">Boys</a>
-                            <a href="kids-girls.php">Girls</a>
-                            <a href="kids-toddlers.php">Toddlers</a>
-                        </div>
                     </li>
                 </ul>
                     <li class="nav-item">
