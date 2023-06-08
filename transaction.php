@@ -584,9 +584,10 @@ $con=connect();
                 <div class="col-sm-6 col-lg-3" align="left">
                     <h4 class="display-4 name">Lifestyle Clothing Co.</h4>
                     <p class="lead">
-                    As Asia’s Online Fashion Destination, we create endless style possibilities through 
-                    an ever-expanding range of products form the most coveted international and local 
-                    brands, putting you at the centre of it all. With Lifestyle Clothing Co., You Own Now.
+                    We are JDMania Auto Deals, the ultimate destination for JDM enthusiasts. We offer a curated 
+                    selection of top-tier JDM vehicles that ignite the senses, from iconic classics to cutting-edge 
+                    performance machines. Experience the heart and soul of JDM culture with us, where horsepower meets 
+                    passion in perfect harmony.
                     </p>
                 </div>
 

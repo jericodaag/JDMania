@@ -285,67 +285,127 @@ else{
 <head>
     <style>
         body {
-            font-family: "Geomatrix";
-            text-align: center;
+            background-color: #000;
             color: #fff;
+            margin: 0;
+            padding: 0;
         }
-        .container-about {
+        .container {
+            max-width: 960px;
             margin: 0 auto;
-            max-width: 800px;
+            padding: 40px;
         }
-        h2 {
-            font-family: "Valorant Font";
-            font-size: 50px;
+        h1 {
+            font-family: "Valorant font";
+            font-size: 48px;
+            color: #ff4500;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .subtitle {
+            font-family:"A4speed";
+            font-size: 24px;
+            color: #ff4500;
+            text-align: center;
+            margin-bottom: 40px;
         }
         .description {
-            font-family: "Valorant Font";
-            font-size:20px;
+            font-family:"Cafe";
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 40px;
         }
-        .highlight {
-            font-family: "Chocolates";
-            font-style: italic;
+        .mission {
+            font-family:"A4speed";
+            font-size: 24px;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 40px;
         }
-        .about,
-        .mission,
-        .mission-statement,
-        .why-choose,
-        .why-choose-item,
-        .start-journey,
+        .mission-statement {
+            font-family:"Cafe";
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .why-choose {
+            font-family:"A4speed";
+            font-size: 24px;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .why-choose-list {
+            font-family:"Cafe";
+            list-style-type: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        .why-choose-item {
+            font-family:"Cafe";
+            width: 400px;
+            padding: 20px;
+            margin: 10px;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .why-choose-item p {
+            font-family:"Cafe";
+            font-size: 18px;
+            color: #fff;
+            margin: 0;
+        }
+        .start-journey {
+            font-family:"A4speed";
+            font-size: 35px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
         .explore-inventory {
-            font-family: "Courier New", Courier, monospace;
-            font-size:20px;
+            font-family:"Cafe";
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 60px;
         }
+        
     </style>
 </head>
 <body>
-    <!-- Navigation content here -->
-    <!-- Banner content here -->
-    <!-- Main content here -->
-    <div class="container-about">
-        <div class="row">
-            <div class="col-12">
-                <h2>Welcome to JDMania!</h2>
-                <p class="description">Unleash Your Passion for JDM Cars</p>
-                <p class="highlight">Experience the Thrill of Japanese Automotive Excellence</p>
-                <p class="about">At JDMania, we live and breathe JDM (Japanese Domestic Market) cars. We are more than just a dealership; we are a gateway to a world where performance, style, and heritage intertwine to create automotive masterpieces.</p>
-                <p class="mission">Our Mission:</p>
-                <p class="mission-statement">To provide car enthusiasts with access to the finest selection of JDM vehicles, meticulously curated to ignite your automotive dreams and empower your driving experience.</p>
-                <p class="why-choose">Why Choose JDMania:</p>
-                <ul class="why-choose-list">
-                    <li class="why-choose-item">Authentic JDM Vehicles: We handpick each car, ensuring it embodies the essence of the JDM culture and represents the pinnacle of Japanese automotive engineering.</li>
-                    <li class="why-choose-item">Quality and Transparency: Our team of experts meticulously inspects and verifies the authenticity and performance of every vehicle, providing you with peace of mind and confidence in your purchase.</li>
-                    <li class="why-choose-item">Passionate Expertise: Our knowledgeable staff are true car enthusiasts, ready to share their expertise, offer valuable insights, and guide you towards your perfect JDM car.</li>
-                    <li class="why-choose-item">Exceptional Buying Experience: From browsing our extensive inventory to personalized test drives and seamless transactions, we prioritize your satisfaction and strive to exceed your expectations.</li>
-                    <li class="why-choose-item">Join the JDM Community: By choosing JDMania, you become part of a vibrant community of passionate JDM enthusiasts, where your love for cars can flourish and connections can be forged.</li>
-                </ul>
-                <p class="start-journey">Start Your JDM Adventure Today!</p>
-                <p class="explore-inventory">Explore our diverse inventory of JDM vehicles, immerse yourself in the legacy of automotive greatness, and embark on an unforgettable journey behind the wheel of your dream car.</p>
-            </div>
-        </div>
+    <div class="container">
+        <h1>Welcome to JDMania!</h1>
+        <p class="subtitle">Unleash Your Passion for JDM Cars</p>
+        <p class="description">At JDMania, we live and breathe JDM (Japanese Domestic Market) cars. We are more than just a dealership; we are a gateway to a world where performance, style, and heritage intertwine to create automotive masterpieces.</p>
+        <p class="mission">Our Mission:</p>
+        <p class="mission-statement">To provide car enthusiasts with access to the finest selection of JDM vehicles, meticulously curated to ignite your automotive dreams and empower your driving experience.</p>
+        <p class="why-choose">Why Choose JDMania:</p>
+        <ul class="why-choose-list">
+            <li class="why-choose-item">
+                <p>Authentic JDM Vehicles: We handpick each car, ensuring it embodies the essence of the JDM culture and represents the pinnacle of Japanese automotive engineering.</p>
+            </li>
+            <li class="why-choose-item">
+                <p>Quality and Transparency: Our team of experts meticulously inspects and verifies the authenticity and performance of every vehicle, providing you with peace of mind and confidence in your purchase.</p>
+            </li>
+            <li class="why-choose-item">
+                <p>Passionate Expertise: Our knowledgeable staff are true car enthusiasts, ready to share their expertise, offer valuable insights, and guide you towards your perfect JDM car.</p>
+            </li>
+            <li class="why-choose-item">
+                <p>Exceptional Buying Experience: From browsing our extensive inventory to personalized test drives and seamless transactions, we prioritize your satisfaction and strive to exceed your expectations.</p>
+            </li>
+            <li class="why-choose-item">
+                <p>Join the JDM Community: By choosing JDMania, you become part of a vibrant community of passionate JDM enthusiasts, where your love for cars can flourish and connections can be forged.</p>
+            </li>
+        </ul>
+        <p class="start-journey">Start Your JDM Adventure Today!</p>
+        <p class="explore-inventory">Explore our diverse inventory of JDM vehicles, immerse yourself in the legacy of automotive greatness, and embark on an unforgettable journey behind the wheel of your dream car.</p>
     </div>
-    <!-- Footer content here -->
 </body>
 </html>
+
+
 
 
 
@@ -363,9 +423,10 @@ else{
                 <div class="col-sm-6 col-lg-3" align="left">
                     <h4 class="display-4 name">Lifestyle Clothing Co.</h4>
                     <p class="lead">
-                        As Asia’s Online Fashion Destination, we create endless style possibilities through 
-                    an ever-expanding range of products form the most coveted international and local 
-                    brands, putting you at the centre of it all. With Lifestyle Clothing Co., You Own Now.
+                    We are JDMania Auto Deals, the ultimate destination for JDM enthusiasts. We offer a curated 
+                    selection of top-tier JDM vehicles that ignite the senses, from iconic classics to cutting-edge 
+                    performance machines. Experience the heart and soul of JDM culture with us, where horsepower meets 
+                    passion in perfect harmony.
                     </p>
                 </div>
 

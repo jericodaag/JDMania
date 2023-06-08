@@ -1022,10 +1022,11 @@ else{
             <div class="row">
                 <div class="col-12">
                     <p class="lead">
-                    As Asia’s Online Fashion Destination, we create endless style possibilities <br>
-                    through an ever-expanding range of products form the most coveted international <br>
-                    and local brands, putting you at the centre of it all. With Lifestyle Clothing Co., You Own Now.
+                        Welcome to our JDM auto dealing shop, where automotive passion takes the driver's seat.<br>
+                    We are dedicated to offering a curated selection of Japanese vehicles that blend performance, style, and heritage.<br>
+                    From sought-after classics to cutting-edge imports, our goal is to provide enthusiasts with an exhilarating experience fueled by the power and precision of JDM excellence.
                     </p>
+
                 </div>
             </div>
         </div>
@@ -1040,11 +1041,12 @@ else{
         <div class="container-fluid footer">
             <div class="row" style="justify-content: space-around;">
                 <div class="col-sm-6 col-lg-3" align="left">
-                    <h4 class="display-4 name">Lifestyle Clothing Co.</h4>
+                    <h4 class="display-4 name">JDMania Auto Deals</h4>
                     <p class="lead">
-                    As Asia’s Online Fashion Destination, we create endless style possibilities through 
-                    an ever-expanding range of products form the most coveted international and local 
-                    brands, putting you at the centre of it all. With Lifestyle Clothing Co., You Own Now.
+                    We are JDMania Auto Deals, the ultimate destination for JDM enthusiasts. We offer a curated 
+                    selection of top-tier JDM vehicles that ignite the senses, from iconic classics to cutting-edge 
+                    performance machines. Experience the heart and soul of JDM culture with us, where horsepower meets 
+                    passion in perfect harmony.
                     </p>
                 </div>
 

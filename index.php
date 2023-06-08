@@ -243,7 +243,7 @@ if(isset($_SESSION['UserLogIn'])&&($_SESSION['Access']=="User")){
                 $_SESSION['message'] = "<script>
                                 $(function() {
                                     $.notify({
-                                        message: 'Security Advisory: Lifestyle Clothing Co. Sellers are NOT allowed to ask you to order and transact your payments outside the platform. When using our Cash on Delivery service, payment is given to our official delivery partner upon receipt of item.' 
+                                        message: 'Security Advisory: Protect Yourself! Avoid engaging in car auto dealings outside of our official platform to ensure your safety and security. Never share sensitive information or make payments to unauthorized individuals.' 
                                     },{
                                         animate: {
                                             enter: 'animate__animated animate__fadeInDown',
@@ -721,7 +721,7 @@ else{
       </div>
       <div class="carousel-caption">
         <h1 class="display-4">Take a look at our finest collection</h1>
-        <p class="lead">Premium products all around the shop</p>
+        <p class="lead">Explore the Finest Japanese Imports in Central Japan</p>
         <a href="home.php#about">
           <button type="button" class="btn btn-primary btn-md" style="background-color: #bf2e2e; border-color: #bf2e2e;">Learn More</button>
         </a>
@@ -735,8 +735,8 @@ else{
         </video>
       </div>
       <div class="carousel-caption">
-        <h1 class="display-4">Take a look at our finest collection</h1>
-        <p class="lead">Premium products all around the shop</p>
+        <h1 class="display-4">Unleash the Power. Unleash the Style.</h1>
+        <p class="lead">Experience Unmatched Performance and Style at JDMania</p>
         <a href="home.php#about">
           <button type="button" class="btn btn-primary btn-md" style="background-color: #bf2e2e; border-color: #bf2e2e;">Learn More</button>
         </a>
@@ -835,7 +835,7 @@ else{
                                     <span class="fa fa-star"></span>
                                     <span class="fa fa-star"></span>
                                     <span class="fa fa-star-half-alt"></span>
-                                    <label>&nbsp;(<?php echo $rows['quantity']?> Left)</label> 
+                                    <label class="quantity-label"><?php echo $rows['quantity']?> Left</label>
                             </div>
                          </div>
                     </div>
@@ -902,7 +902,9 @@ else{
                                     <span class="fa fa-star-half-alt"></span>
                                     <span class="far fa-star"></span>
                                     
-                                    <label>&nbsp;(<?php echo $row['quantity']?> Left)</label> 
+                                    <div class="container-label">
+                                        <label>&nbsp;(<?php echo $row['quantity']; ?> Left)</label>
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -945,7 +947,9 @@ else{
                                     <span class="fa fa-star"></span>
                                     <span class="fa fa-star"></span>
                                     <span class="fa fa-star-half-alt"></span>
+                                    <div class="container-label">
                                     <label>&nbsp;(<?php echo $row['quantity']?> Left)</label> 
+                                    </div>
                                 </div>
                             </a>
                         </div>
@@ -992,7 +996,9 @@ else{
                                     <span class="far fa-star"></span>
                                     <span class="far fa-star"></span>
                                     
-                                    <label>&nbsp;(<?php echo $row['quantity']?> Left)</label> 
+                                    <div class="container-label">
+                                    <label>&nbsp;(<?php echo $row['quantity']?> Left)</label>
+                                    </div> 
                                 </div>
                             </a>
                         </div>
@@ -1016,9 +1022,9 @@ else{
             <div class="row">
                 <div class="col-12">
                     <p class="lead">
-                    As Asia’s Online Fashion Destination, we create endless style possibilities <br>
-                    through an ever-expanding range of products form the most coveted international <br>
-                    and local brands, putting you at the centre of it all. With Lifestyle Clothing Co., You Own Now.
+                        Welcome to our JDM auto dealing shop, where automotive passion takes the driver's seat.<br>
+                    We are dedicated to offering a curated selection of Japanese vehicles that blend performance, style, and heritage.<br>
+                    From sought-after classics to cutting-edge imports, our goal is to provide enthusiasts with an exhilarating experience fueled by the power and precision of JDM excellence.
                     </p>
                 </div>
             </div>
@@ -1036,9 +1042,10 @@ else{
                 <div class="col-sm-6 col-lg-3" align="left">
                     <h4 class="display-4 name">Lifestyle Clothing Co.</h4>
                     <p class="lead">
-                    As Asia’s Online Fashion Destination, we create endless style possibilities through 
-                    an ever-expanding range of products form the most coveted international and local 
-                    brands, putting you at the centre of it all. With Lifestyle Clothing Co., You Own Now.
+                    We are JDMania Auto Deals, the ultimate destination for JDM enthusiasts. We offer a curated 
+                    selection of top-tier JDM vehicles that ignite the senses, from iconic classics to cutting-edge 
+                    performance machines. Experience the heart and soul of JDM culture with us, where horsepower meets 
+                    passion in perfect harmony.
                     </p>
                 </div>
 
