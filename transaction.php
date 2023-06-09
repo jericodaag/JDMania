@@ -484,7 +484,7 @@ $con=connect();
                             <th scope="row"><?php echo $row['transactionID'];?></th>
                             <td><?php echo $row['customerName']?></td>
                             <td><?php echo $row['productName'];?></td>
-                            <td>₱<?php echo $row['Price'];?>.00</td>
+                            <td>₱<?php echo $row['price'];?>.00</td>
                             <td><?php echo $row['Quantity'];?></td>
                             <td>₱<?php echo $row['Total'];?>.00</td>
                             <td><?php echo $row['Date'];?></td>
@@ -559,7 +559,7 @@ $con=connect();
                             <th scope="row"><?php echo $row['transactionID'];?></th>
                             <td><?php echo $row['customerName']?></td>
                             <td><?php echo $row['productName'];?></td>
-                            <td>₱<?php echo $row['Price'];?>.00</td>
+                            <td>₱<?php echo $row['price'];?>.00</td>
                             <td><?php echo $row['Quantity'];?></td>
                             <td>₱<?php echo $row['Total'];?>.00</td>
                             <td><?php echo $row['Date'];?></td>

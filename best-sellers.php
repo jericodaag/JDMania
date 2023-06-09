@@ -314,7 +314,7 @@ else{
         <div class="container-fluid footer">
             <div class="row" style="justify-content: space-around;">
                 <div class="col-sm-6 col-lg-3" align="left">
-                    <h4 class="display-4 name">Lifestyle Clothing Co.</h4>
+                    <h4 class="display-4 name">JDMania Auto Deals</h4>
                     <p class="lead">
                     We are JDMania Auto Deals, the ultimate destination for JDM enthusiasts. We offer a curated 
                     selection of top-tier JDM vehicles that ignite the senses, from iconic classics to cutting-edge 

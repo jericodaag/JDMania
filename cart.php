@@ -93,7 +93,7 @@ $con=connect();
 
                 $img=$row['photo'];
                 $prodname=$row['productName'];
-                $price=$row['Price'];
+                $price=$row['price'];
                 $total=$row['Total'];
                 $quan=$row['Quantity'];
                 $prodid=$row['productID'];
@@ -682,10 +682,10 @@ $con=connect();
                        <input type=hidden name=productID value=<?php echo $row['productID'];?>>
                        <input type=hidden name=quan value=<?php echo $row['Quantity'];?>>
                        <input type=hidden name=productname value=<?php echo $row['productName'];?>>
-                       <input type=hidden name=price value=<?php echo $row['Price'];?>>
+                       <input type=hidden name=price value=<?php echo $row['price'];?>>
                        <input type=hidden name=total value=<?php echo $row['Total'];?>>
                         <td class="cart-item-name align-middle"><?php echo $row['productName'];?></td>
-                        <td class="cart-item-price align-middle">₱<?php echo $row['Price'];?>.00</td>
+                        <td class="cart-item-price align-middle">₱<?php echo $row['price'];?>.00</td>
                         <td class="align-middle">
                         
                           <?php echo $row['Quantity'];?>
