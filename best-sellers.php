@@ -346,7 +346,7 @@ else{
             <hr>
             <div class="row text-center">
                 <div class="col-12">
-                   <p>Copyright © 2021 | All Rights Reserved</p>
+                   <p>Copyright © 2023 | All Rights Reserved</p>
                 </div>
             </div>
         </div>
